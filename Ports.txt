@@ -1,0 +1,7 @@
+Api-gateway: 6999
+Eureka-Server: 7000
+Profile-Service: 7001
+Product-Service: 7002
+Cart-Service: 7003
+Order-Service: 7004
+Website-Controller: 7007

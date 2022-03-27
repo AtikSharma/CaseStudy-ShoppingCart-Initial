@@ -1,0 +1,27 @@
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:7000/eureka
+
+server:
+  port: 7002
+
+spring:
+  application:
+    name: product-service
+  data:
+    mongodb:
+      database: CaseStudy-OnlineShoppingCart
+      host: localhost
+      port: 27017
+#eureka:
+#  instance:
+#    hostname: localhost
+
+eureka:
+  client:
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:7000/eureka
+  instance:
+    hostname: localhost

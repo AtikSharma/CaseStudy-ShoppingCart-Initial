@@ -1,0 +1,15 @@
+Product-Service: 7002
+	addproduct: http://product-service/product/addProduct
+	updateProduct: http://product-service/product/updateProduct
+	deleteProduct: http://product-service/product/deleteProduct/
+	getAllProduct: http://product-service/product/getAllProducts
+	getProductById: http://product-service/product/getProduct/id/
+	getProductByType: http://product-service/product/getProduct/type/
+	getProductByname: http://product-service/product/getProduct/name/
+	getProductBycategory: http://product-service/product/getProduct/category/
+
+Cart-Service: 7003
+	addCart: http://cart-service/cart/addCart
+	updateCart: http://cart-service/cart/updateCart
+	getAllCarts: http://cart-service/cart/getAllCarts
+	getCartById:http://cart-service/cart/getCart/

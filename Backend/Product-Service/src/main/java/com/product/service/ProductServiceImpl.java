@@ -2,11 +2,15 @@ package com.product.service;
 
 import com.product.model.Product;
 import com.product.repository.ProductRepo;
+import com.product.resource.ProductResource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -15,8 +19,10 @@ public class ProductServiceImpl implements ProductService {
     ProductRepo repo;
 
 
+
     @Override
     public void addProducts(Product product) {
+        product.setProductId(UUID.randomUUID().toString());
         repo.save(product);
     }
 

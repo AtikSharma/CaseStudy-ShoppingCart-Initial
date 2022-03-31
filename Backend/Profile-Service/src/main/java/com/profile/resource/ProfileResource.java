@@ -3,6 +3,7 @@ package com.profile.resource;
 import com.profile.exception.UserNotFoundException;
 import com.profile.model.UserProfile;
 import com.profile.service.ProfileService;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@OpenAPIDefinition
 @RestController
 @CrossOrigin
 @RequestMapping("profile")

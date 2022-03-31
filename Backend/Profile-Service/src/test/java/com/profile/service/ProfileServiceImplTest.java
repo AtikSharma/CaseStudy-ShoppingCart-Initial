@@ -1,5 +1,6 @@
 package com.profile.service;
 
+import com.profile.ProfileServiceApplication;
 import com.profile.exception.UserNotFoundException;
 import com.profile.model.Address;
 import com.profile.model.UserProfile;
@@ -8,10 +9,12 @@ import org.junit.jupiter.api.*;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -28,6 +31,8 @@ class ProfileServiceImplTest {
     ProfileRepo repo;
     @Mock
     RestTemplate template;
+    @Mock
+    KafkaTemplate kafkaTemplate;
     @InjectMocks
     ProfileServiceImpl service;
 
@@ -162,14 +167,15 @@ class ProfileServiceImplTest {
             when(repo.findById(userId)).thenReturn(users.stream().filter(userProfile -> userProfile.getUserId() == userId).findFirst());
             assertEquals(userId, service.getByProfileId(userId).getUserId());
         }
-//        @Test
-//        @Order(3)
-//        @DisplayName("getByProfileId2")
-//        void getById2() throws UserNotFoundException {
-//            String userId = "id_6"; //intentionally provided wrong input
-//            when(repo.findById(userId)).thenReturn(users.stream().filter(userProfile -> userProfile.getUserId() == userId).findFirst());
-//            assertEquals(userId, service.getByProfileId(userId).getUserId());
-//        }
+
+        @Test
+        @Order(3)
+        @DisplayName("getByProfileId2")
+        void getById2() throws UserNotFoundException {
+            String userId = "id_6"; //intentionally provided wrong input
+            when(repo.findById(userId)).thenReturn(Optional.empty());
+            assertThrows(UserNotFoundException.class,() -> {service.getByProfileId(userId);});
+        }
 
         @Test
         @Order(4)
@@ -180,29 +186,15 @@ class ProfileServiceImplTest {
             assertEquals(name, service.getByUserName(name).getUserFullName());
         }
 
-//        @Test
-//        @Order(5)
-//        @DisplayName("getByUsername2")
-//        void getByusername2() throws UserNotFoundException{
-//            String name = "UserFullName5"; //intentionally provided wrong input
-//            when(repo.findByuserFullName(name)).thenReturn(users.stream().filter(userProfile -> userProfile.getUserFullName() == name).findFirst().get());
-//            assertEquals(name, service.getByUserName(name).getUserFullName());
-//        }
+        @Test
+        @Order(5)
+        @DisplayName("getByUsername2")
+        void getByusername2() throws UserNotFoundException{
+            String name = "UserFullName9";
+            when(repo.findByuserFullName(name)).thenReturn(null);
+            assertThrows(UserNotFoundException.class, () -> {service.getByUserName(name);});
+        }
 
-//        @Test
-//        @Order(6)
-//        @DisplayName("getByMobile")
-//        void getBymobile() throws MobileNoNotFoundException {
-//            long mobile = 123456569l; //intentionally provided wrong input
-//            try{
-//                when(repo.findByuserMobileNo(mobile)).thenReturn(users.stream().filter(userProfile -> userProfile.getUserMobileNo() == mobile).findFirst().get());
-//            }
-//            catch (Exception e)
-//            {
-//                throw new MobileNoNotFoundException("Mobile No not found");
-//            }
-//            assertEquals(mobile, service.findByMobileNo(mobile).getUserMobileNo());
-//        }
 
     }
 
@@ -240,6 +232,13 @@ class ProfileServiceImplTest {
             service.deleteProfile(userID);
             verify(repo,times(1)).deleteById(userID);
         }
+    }
+
+    @Test
+    void testmain()
+    {
+        String args[] = {""};
+        ProfileServiceApplication.main(args);
     }
 
 

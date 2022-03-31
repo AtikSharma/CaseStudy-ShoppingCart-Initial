@@ -18,6 +18,5 @@ public interface ProfileService {
 	void updateProfile(UserProfile user);
 	
 	void deleteProfile(String userId);
-//	UserProfile findByMobileNo(long userMobileNo);
-//	UserProfile findByMobileNo(long userMobileNo) throws  MobileNoNotFoundException;
+
 }

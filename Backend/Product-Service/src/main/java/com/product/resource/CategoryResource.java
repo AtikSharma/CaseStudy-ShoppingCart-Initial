@@ -2,12 +2,14 @@ package com.product.resource;
 
 import com.product.model.Category;
 import com.product.service.category.CategoryService;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@OpenAPIDefinition
 @RestController
 @CrossOrigin
 @RequestMapping("category")

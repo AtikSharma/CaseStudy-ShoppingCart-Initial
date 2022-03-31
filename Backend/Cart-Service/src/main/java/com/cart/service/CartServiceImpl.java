@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -39,6 +40,7 @@ public class CartServiceImpl implements CartService {
 	}
 
 	@Override
+	@KafkaListener(topics = "CartId" , groupId = "online-shopping-app" , containerFactory = "kafkaListenerContainerFactory")
 	public void addCart(String userId) {
 		cartRepo.save(new Cart(userId, 0, new ArrayList<Items>()));
 	}

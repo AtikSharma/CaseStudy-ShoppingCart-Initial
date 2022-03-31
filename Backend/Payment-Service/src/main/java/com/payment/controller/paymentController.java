@@ -1,14 +1,14 @@
 package com.payment.controller;
 
-//import com.payment.client.StripeClient;
 import com.payment.model.Statement;
 import com.payment.service.paymentService;
-import com.stripe.model.Charge;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@OpenAPIDefinition
 @CrossOrigin
 @RestController
 @RequestMapping("/payment")

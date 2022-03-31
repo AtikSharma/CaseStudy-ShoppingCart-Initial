@@ -1,10 +1,12 @@
 package com.profile.service;
 
 import com.profile.exception.UserNotFoundException;
-import com.profile.model.Role;
 import com.profile.model.UserProfile;
 import com.profile.repository.ProfileRepo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -12,14 +14,16 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
-
-
-
 @Service
 public class ProfileServiceImpl implements ProfileService {
 
+    Logger logger= LoggerFactory.getLogger(ProfileService.class);
+
+
     @Autowired
     ProfileRepo repo;
+    @Autowired
+    private KafkaTemplate<String, String> kafkaTemplate;
 
     @Autowired
     RestTemplate restTemplate;
@@ -27,23 +31,25 @@ public class ProfileServiceImpl implements ProfileService {
     @Override
     public UserProfile addNewCustomerProfile(UserProfile user) {
         user.setUserPassword(this.passwordEncoder().encode(user.getUserPassword()));
-        user.setUserRole(Role.customer);
+        user.setUserRole("ROLE_Customer");
         repo.save(user);
-        this.restTemplate.postForObject("http://cart-service/cart/addCart/" + user.getUserId(), user, Void.class);
+        kafkaTemplate.send("CartId", user.getUserId());
+        logger.info (user.getUserId() + "is published to kafka topic ");
+//        this.restTemplate.postForObject("http://cart-service/cart/addCart/" + user.getUserId(), user, Void.class);
         return user;
     }
 
     @Override
     public void addNewMerchantProfile(UserProfile user) {
         user.setUserPassword(this.passwordEncoder().encode(user.getUserPassword()));
-        user.setUserRole(Role.merchant);
+        user.setUserRole("ROLE_Merchant");
         repo.save(user);
     }
 
     @Override
     public void addNewDeliveryProfile(UserProfile user) {
         user.setUserPassword(this.passwordEncoder().encode(user.getUserPassword()));
-        user.setUserRole(Role.deliveryAgent);
+        user.setUserRole("ROLE_DeliveryAgent");
         repo.save(user);
     }
 
@@ -54,12 +60,21 @@ public class ProfileServiceImpl implements ProfileService {
 
     @Override
     public UserProfile getByProfileId(String userId) throws UserNotFoundException {
-        return repo.findById(userId).orElseThrow(() -> new UserNotFoundException("UserNotFoundWithId: " + userId));
+        if(repo.findById(userId).isEmpty())
+        {
+            throw  new UserNotFoundException("User Not Found with UserId " + userId);
+        }
+
+        return repo.findById(userId).get();
     }
 
     @Override
-    public UserProfile getByUserName(String userFullName) throws UserNotFoundException {
-        System.out.println(userFullName);
+    public UserProfile getByUserName(String userFullName) throws UserNotFoundException{
+        if(repo.findByuserFullName(userFullName) == null)
+        {
+            throw  new UserNotFoundException("User Not Found with UserName " + userFullName);
+        }
+
         return repo.findByuserFullName(userFullName);
     }
 
@@ -74,27 +89,8 @@ public class ProfileServiceImpl implements ProfileService {
         repo.deleteById(userId);
     }
 
-
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder(10);
     }
-
-    //    @Override
-//    public UserProfile findByMobileNo(long userMobileNo) throws MobileNoNotFoundException {
-//        UserProfile user;
-//        user = repo.findByuserMobileNo(userMobileNo);
-//        if (user == null) throw new MobileNoNotFoundException("No user found with Mobile No : " + userMobileNo);
-//        return repo.findByuserMobileNo(userMobileNo);
-//    }
-
-    //HELPER METHODS
-//    void addAddressToOrderDB(UserProfile user) {
-//        int noOfAddress = user.getUserAddresses().size();
-//        for (int i = 0; i < noOfAddress; i++) {
-//            OrderAddress newOrderAddress = new OrderAddress(user.getUserId(), user.getUserFullName(), user.getUserMobileNo(), user.getUserAddresses().get(i).getHouseNo(), user.getUserAddresses().get(i).getStreetName(), user.getUserAddresses().get(i).getColonyName(), user.getUserAddresses().get(i).getCity(), user.getUserAddresses().get(i).getState(), user.getUserAddresses().get(i).getPinCode());
-//            this.restTemplate.postForObject("http://order-service/order/storeAddress", newOrderAddress, Void.class);
-//        }
-//
-//    }
 
 }

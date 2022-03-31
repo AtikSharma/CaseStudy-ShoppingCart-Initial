@@ -2,6 +2,7 @@ package com.order.resource;
 
 import java.util.List;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,6 +11,7 @@ import com.order.cart.Cart;
 import com.order.model.Orders;
 import com.order.service.OrderService;
 
+@OpenAPIDefinition
 @RestController
 @RequestMapping("order")
 public class OrderResource {

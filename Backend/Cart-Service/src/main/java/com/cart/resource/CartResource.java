@@ -2,6 +2,7 @@ package com.cart.resource;
 
 import java.util.List;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,7 @@ import com.cart.model.Cart;
 import com.cart.model.Items;
 import com.cart.service.CartService;
 
+@OpenAPIDefinition
 @RestController
 @CrossOrigin
 @RequestMapping("cart")
@@ -32,8 +34,9 @@ public class CartResource {
 		{
 			return ResponseEntity.ok(cartService.getCartById(cartId));
 		}
-		return new ResponseEntity("CART NOT FOUND	", HttpStatus.NO_CONTENT);
+		return new ResponseEntity("cart not found", HttpStatus.NO_CONTENT);
 	}
+
 
 	@PostMapping("/addCart/{userId}")
 	public void addCart(@PathVariable("userId") String userId) {

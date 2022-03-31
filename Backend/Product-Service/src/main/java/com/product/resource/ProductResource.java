@@ -3,6 +3,9 @@ package com.product.resource;
 import com.product.model.Product;
 import com.product.service.ProductService;
 import com.product.service.helper.FileUploadHelper;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,10 +16,13 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.util.List;
 import java.util.Optional;
 
+@OpenAPIDefinition
 @RestController
 @CrossOrigin
 @RequestMapping("product")
 public class ProductResource {
+
+    Logger logger= LoggerFactory.getLogger(ProductResource.class);
     @Autowired
     FileUploadHelper fileUploadHelper;
 
@@ -39,7 +45,7 @@ public class ProductResource {
             if (f) {
                 String url = ServletUriComponentsBuilder.fromCurrentContextPath().path("/image/").path(file.getOriginalFilename()).toUriString();
 //				return  ResponseEntity.ok("File is successfull upload");
-                System.out.println(url);
+                logger.info(url);
                 return ResponseEntity.ok(url);
             }
         } catch (Exception e) {
@@ -53,7 +59,7 @@ public class ProductResource {
 
 
     @PostMapping("/addProduct")
-    public ResponseEntity<?> addProduct(@RequestBody Product product) {
+    public ResponseEntity<String> addProduct(@RequestBody Product product) {
         productService.addProducts(product);
           return ResponseEntity.ok("Product Added successfully");
     }

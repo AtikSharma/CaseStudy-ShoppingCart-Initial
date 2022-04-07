@@ -1,71 +1,38 @@
 import React, { useState, useEffect } from "react";
 import "../styles.css";
 import Base from "./Base";
-import axios from "axios";
-import { toast } from "react-toastify";
 import Product from "./../Product/Product";
-import { checkAuthentication } from "./../Auth/helper/authHelper";
-import api from "./../api/webapi";
+import {
+  getAllProductFromServer,
+  getAllCategories,
+  getProductByCategory,
+} from "../Product/helper/updateHelper";
 
 export default function Home() {
-
   const [Products, setProducts] = useState([]);
   const [Categories, setCategories] = useState({});
-  const currentUser = checkAuthentication();
-  const getAllProductFromServer = () => {
-    axios.get(`${api}/product/getAllProducts`).then(
-      (response) => {
-        setProducts(response.data);
-        toast.success("Products Loaded", {
-          position: "bottom-center",
-          autoClose: 1000,
-        });
-      },
-      (error) => {
-        console.log(error);
-        toast.error("Something went wrong", {
-          position: "bottom-center",
-          autoClose: 1000,
-        });
-      }
-    );
+
+  const getProducts = async () => {
+    let res = await getAllProductFromServer();
+    setProducts(res.data);
   };
 
-  const getAllCategories = () => {
-    axios.get(`${api}/category/allCategories`).then(
-      (response) => {
-        setCategories(response.data);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+  const getCategories = async () => {
+    let res = await getAllCategories();
+    setCategories(res.data);
   };
 
-  const selectCategory = (name) => {
-    axios
-      .get(`${api}/product/getProduct/category/${name}`, {
-        headers: {
-          "Content-type": "application/json",
-          Authentication: `Bearer ${currentUser.jwt}`,
-        },
-      })
-      .then(
-        (response) => {
-          console.log(response.data);
-          setProducts(response.data);
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
+  const selectCategory = async (name) => {
+    let res = await getProductByCategory(name);
+    setProducts(res.data);
   };
 
   useEffect(() => {
-    getAllProductFromServer();
-    getAllCategories();
+    getProducts();
+    getCategories();
     document.title = "Welcome | Home";
   }, []);
+
   return (
     <Base
       title="Shopping Buddy"
@@ -82,28 +49,34 @@ export default function Home() {
                 >
                   Categories
                 </div>
-                <div
-                  class="list-group-item list-group-item-action "
-                  onClick={() => {
-                    getAllProductFromServer();
-                  }}
-                >
-                  All Categories
-                </div>
-                {Categories.length > 0
-                  ? Categories.map((category) => (
-                      <div
-                        class="list-group-item list-group-item-action "
-                        aria-current="true"
-                        key={category.categoryId}
-                        onClick={() => {
-                          selectCategory(category.categoryName);
-                        }}
-                      >
-                        {category.categoryName}
-                      </div>
-                    ))
-                  : "No Category Found"}
+                {Categories.length > 0 && (
+                  <div
+                    class="list-group-item list-group-item-action "
+                    onClick={() => {
+                      getProducts();
+                    }}
+                  >
+                    All Categories
+                  </div>
+                )}
+                {Categories.length > 0 ? (
+                  Categories.map((category) => (
+                    <div
+                      class="list-group-item list-group-item-action "
+                      aria-current="true"
+                      key={category.categoryId}
+                      onClick={() => {
+                        selectCategory(category.categoryName);
+                      }}
+                    >
+                      {category.categoryName}
+                    </div>
+                  ))
+                ) : (
+                  <div class="list-group-item list-group-item ">
+                    No Category
+                  </div>
+                )}
               </div>
             </div>
             <div className="col">
@@ -116,7 +89,12 @@ export default function Home() {
                         addtoCartButton={true}
                       />
                     ))
-                  : "No Products"}
+                  :  <div
+                  class="alert alert-warning m-auto w-50 text-center shadow mt-1"
+                  role="alert"
+                >
+                  No Products Found
+                </div>}
               </div>
             </div>
           </div>

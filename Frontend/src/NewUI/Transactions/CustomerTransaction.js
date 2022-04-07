@@ -17,7 +17,6 @@ const CustomerTransaction = () => {
       .get(`${api}/payment/statements/${checkAuthentication().profile.userId}`)
       .then(
         (response) => {
-          console.log(response.data);
           setTransactions(response.data);
         },
         (error) => {

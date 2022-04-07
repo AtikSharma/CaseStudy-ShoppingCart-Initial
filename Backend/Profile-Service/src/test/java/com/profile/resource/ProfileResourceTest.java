@@ -6,7 +6,10 @@ import com.profile.service.ProfileServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,6 +81,7 @@ class ProfileResourceTest {
         delivery.setUserId("3");
         when(service.getByProfileId("1")).thenThrow(new UserNotFoundException("error"));
         assertEquals("error",resource.getByProfileId("1").getBody());
+
     }
 
     @Test
@@ -105,4 +109,6 @@ class ProfileResourceTest {
         verify(service,times(1)).deleteProfile("1");
 
     }
+
+
 }

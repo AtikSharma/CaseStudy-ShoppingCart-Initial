@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @OpenAPIDefinition
@@ -23,17 +24,17 @@ public class ProfileResource {
 
     //ADDING PROFILES
     @PostMapping("/addCustomer")
-    UserProfile addNewCustomerProfile(@RequestBody UserProfile user) {
+    UserProfile addNewCustomerProfile(@Valid  @RequestBody UserProfile user) {
         return profileService.addNewCustomerProfile(user);
     }
 
     @PostMapping("/addMerchant")
-    void addNewMerchantProfile(@RequestBody UserProfile user) {
+    void addNewMerchantProfile(@Valid @RequestBody UserProfile user) {
         profileService.addNewMerchantProfile(user);
     }
 
     @PostMapping("/addDeliveryAgent")
-    void addNewDeliveryProfile(@RequestBody UserProfile user) {
+    void addNewDeliveryProfile(@Valid @RequestBody UserProfile user) {
         profileService.addNewDeliveryProfile(user);
     }
 
@@ -54,7 +55,7 @@ public class ProfileResource {
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
         }
 
-        return ResponseEntity.ok(user);
+        return new ResponseEntity<>(user,HttpStatus.OK);
     }
 
 
@@ -72,14 +73,14 @@ public class ProfileResource {
 
     //UPDATE PROFILE
     @PutMapping("/updateProfile")
-    void updateProfile(@RequestBody UserProfile user) {
+    void updateProfile(@Valid @RequestBody UserProfile user) {
         profileService.updateProfile(user);
     }
 
 
     //DELETE PROFILE
     @DeleteMapping("/deleteProfile/{userid}")
-    void deleteProfile(@PathVariable("userid") String userId) {
+    void deleteProfile(@Valid @PathVariable("userid") String userId) {
         profileService.deleteProfile(userId);
     }
 

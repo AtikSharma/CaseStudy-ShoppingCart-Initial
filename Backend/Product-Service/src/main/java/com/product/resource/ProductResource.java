@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
@@ -59,7 +60,7 @@ public class ProductResource {
 
 
     @PostMapping("/addProduct")
-    public ResponseEntity<String> addProduct(@RequestBody Product product) {
+    public ResponseEntity<String> addProduct(@Valid @RequestBody Product product) {
         productService.addProducts(product);
           return ResponseEntity.ok("Product Added successfully");
     }
@@ -97,7 +98,7 @@ public class ProductResource {
 
 
     @PutMapping("/updateProduct")
-    ResponseEntity<Product> updateProduct(@RequestBody Product product) {
+    ResponseEntity<Product> updateProduct(@Valid @RequestBody Product product) {
         return ResponseEntity.ok(productService.updateProduct(product));
     }
 

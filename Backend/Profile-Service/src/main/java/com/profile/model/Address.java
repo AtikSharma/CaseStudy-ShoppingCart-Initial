@@ -3,15 +3,23 @@ package com.profile.model;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
+import javax.validation.Valid;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
+
 @NoArgsConstructor
 @AllArgsConstructor
-public class 	Address {
+public class Address {
 	
 	private int houseNo;
 	private String streetName;
 	private String colonyName;
 	private String city;
 	private String state;
+	@Min(value = 99999 , message = "Pincode Must be of 6 digits")
+	@Max(value = 999999L , message = "Pincode Must be of 6 digits")
 	private int pinCode;
 
 	public int getHouseNo() {
@@ -58,7 +66,7 @@ public class 	Address {
 		return pinCode;
 	}
 
-	public void setPinCode(int pinCode) {
+	public void setPinCode(@Valid int pinCode) {
 		this.pinCode = pinCode;
 	}
 }

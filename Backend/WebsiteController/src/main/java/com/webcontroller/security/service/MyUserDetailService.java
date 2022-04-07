@@ -17,9 +17,7 @@ public class MyUserDetailService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
         UserProfile user = restTemplate.getForObject("http://profile-service/profile/getProfile/username/" + userName, UserProfile.class); //finding user by username
-        System.out.println(user);
         if (user == null) {
-            System.out.println("inside throw");
             throw new UsernameNotFoundException("Not Found" + userName);
         }
         return new MyUserDetails(user);

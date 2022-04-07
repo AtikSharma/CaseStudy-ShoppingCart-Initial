@@ -112,7 +112,7 @@ const AllOrders = () => {
                 {order.orderStatus === "Payment Pending" && (
                   <span class="col-auto text-center ">
                     <span class="badge bg-primary rounded-pill m-2 fs-6 ">
-                      Order Value :{order.amountPaid}
+                      Order Value: {order.amountPaid}
                     </span>{" "}
                     <br />
                     <DropdownButton
@@ -156,7 +156,7 @@ const AllOrders = () => {
                 {order.orderStatus !== "Payment Pending" && (
                   <span class="col-auto text-center ">
                     <span class="badge bg-success rounded-pill m-2 fs-6 ">
-                      Order Value :{order.amountPaid}
+                      Order Value: {order.amountPaid}
                     </span>{" "}
                     <br />
                     <div

@@ -10,7 +10,9 @@ class ProfileServiceApplicationTests {
 
     @Test
     void contextLoads() {
-        assertEquals(0,0);
+        int a = 0;
+        int b = 0;
+        assertEquals(a,b);
     }
 
 

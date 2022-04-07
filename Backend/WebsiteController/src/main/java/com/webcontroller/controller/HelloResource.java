@@ -12,9 +12,12 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @CrossOrigin
 @RestController
 public class HelloResource {
+
 
     @Autowired
     private JwtUtil jwtUtil;
@@ -25,13 +28,11 @@ public class HelloResource {
 
     //Authentication and generating JWT token
     @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
-    public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest) throws Exception {
+    public ResponseEntity<?> createAuthenticationToken(@Valid @RequestBody AuthenticationRequest authenticationRequest) throws Exception {
         try {
-            System.out.println("`before` authenticate");
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(), authenticationRequest.getPassword()));
-            System.out.println("after authenticate");
         } catch (Exception e) {
-            return new ResponseEntity("Incorrect Username or password", HttpStatus.NOT_FOUND);
+            throw new Exception(e.getMessage());
         }
 
         final UserDetails userDetails = userDetailService.loadUserByUsername(authenticationRequest.getUsername());

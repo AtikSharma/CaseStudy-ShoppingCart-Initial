@@ -237,8 +237,9 @@ class ProfileServiceImplTest {
     @Test
     void testmain()
     {
-        String args[] = {""};
+        String[] args = new String[0];
         ProfileServiceApplication.main(args);
+        assertEquals(0,args.length);
     }
 
 

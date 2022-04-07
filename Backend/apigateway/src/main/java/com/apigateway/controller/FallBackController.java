@@ -1,5 +1,8 @@
 package com.apigateway.controller;
 
+import com.apigateway.exception.ServiceUnavailableException;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,8 +30,9 @@ public class FallBackController {
     }
 
     @GetMapping("/authServiceFallBack")
-    public String authServiceFallBack() {
-        return "Auth service is down at this time";
+    public void authServiceFallBack() {
+        throw new ServiceUnavailableException("Auth service is down at this time");
+//        return new ResponseEntity<>("Auth service is down at this time", HttpStatus.SERVICE_UNAVAILABLE);
     }
 
     @GetMapping("/paymentServiceFallBack")

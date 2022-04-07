@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 import java.util.Map;
 
 
@@ -18,10 +19,15 @@ public class Product {
 
 	@Id
 	private String productId;
+	@NotBlank(message = "Product Name can't be null")
 	private String productName;
 	private String productType;
+	@NotBlank(message = "Product must have a category")
 	private String category;
+	@NotBlank(message = "Image Can't be null")
 	private String image;
+	@Min(value = 500,message = "Minimum value must be 500")
+	@Max(value = 150000,message = "Maximum value must be 150000")
 	private Double price;
 	private String description;
 

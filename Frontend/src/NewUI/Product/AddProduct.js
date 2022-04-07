@@ -4,34 +4,36 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import FormCard from "./../core/FormCard";
 import Base from "./../core/Base";
-import api from './../api/webapi';
+import api from "./../api/webapi";
+import { getAllCategories } from './helper/updateHelper';
 
 function AddProduct() {
   useEffect(() => {
     document.title = "Add Products";
   }, []);
 
-  const [Product, setProduct] = useState({});
+  const [Product, setProduct] = useState({
+    category: "",
+    description: "",
+    image: "",
+    price: 0,
+    productName: "",
+    productType: "",
+  });
   const [Categories, setCategories] = useState({});
   const formData = new FormData();
 
-  const getAllCategories = () => {
-    axios.get(`${api}/category/allCategories`).then(
-      (response) => {
-        setCategories(response.data);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+  const getCategories = async () => {
+    let res = await getAllCategories();
+    setCategories(res.data);
   };
 
+
   useEffect(() => {
-    getAllCategories();
+    getCategories();
   }, []);
 
   const handleForm = (e) => {
-    console.log(Product);
     postDataToServer(Product);
     e.preventDefault();
   };
@@ -40,16 +42,17 @@ function AddProduct() {
   const postDataToServer = (data) => {
     axios.post(`${api}/product/addProduct`, data).then(
       (response) => {
-        console.log(response);
-        addProduct();
+        toast.success("Product Added!", {
+          position: "top-center",
+          autoClose: 1000,
+        });
       },
       (error) => {
-        console.log(error);
-        toast.error("Something went wrong", {
-          position: "bottom-center",
-          autoClose: 1000,
-          hideProgressBar: false,
-        });
+        error.response.data.map((error) =>
+          toast.error(`${error}`, {
+            position: "bottom-right",
+          })
+        );
       }
     );
   };
@@ -57,12 +60,9 @@ function AddProduct() {
   const uploadImage = (name) => (event) => {
     const imageFile = event.target.files[0];
     formData.set(name, imageFile);
-    console.log(formData);
     axios.post(`${api}/product/uploadImage`, formData).then(
       (response) => {
-        console.log(response);
         setProduct({ ...Product, image: response.data });
-        console.log("success");
       },
       (error) => {
         console.log(error);
@@ -74,13 +74,7 @@ function AddProduct() {
     );
   };
 
-  const addProduct = () =>
-    toast.success("Product Added!", {
-      position: "top-center",
-      autoClose: 1000,
-    });
 
-  
   return (
     <Base title="" description="">
       <FormCard header="Add Product">
@@ -145,15 +139,17 @@ function AddProduct() {
                 className="form-select"
                 placeholder="Category"
               >
-               <option selected>Select Category</option>
+                <option selected>Select Category</option>
                 {Categories.length > 0
-                    ? Categories.map((category) => (
-                    <option key={category.categoryId} value={category.categoryName}>
-                      {category.categoryName}
-                    </option>
-                  ))  
-                : "No Category Found"
-                }
+                  ? Categories.map((category) => (
+                      <option
+                        key={category.categoryId}
+                        value={category.categoryName}
+                      >
+                        {category.categoryName}
+                      </option>
+                    ))
+                  : "No Category Found"}
               </select>
             </Col>
           </FormGroup>

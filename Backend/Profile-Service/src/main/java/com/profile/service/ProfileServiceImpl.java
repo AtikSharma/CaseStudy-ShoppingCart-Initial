@@ -13,20 +13,20 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProfileServiceImpl implements ProfileService {
 
-    Logger logger= LoggerFactory.getLogger(ProfileService.class);
+    Logger logger = LoggerFactory.getLogger(ProfileServiceImpl.class);
 
 
     @Autowired
     ProfileRepo repo;
     @Autowired
-    private KafkaTemplate<String, String> kafkaTemplate;
-
-    @Autowired
     RestTemplate restTemplate;
+    @Autowired
+    private KafkaTemplate<String, String> kafkaTemplate;
 
     @Override
     public UserProfile addNewCustomerProfile(UserProfile user) {
@@ -34,8 +34,7 @@ public class ProfileServiceImpl implements ProfileService {
         user.setUserRole("ROLE_Customer");
         repo.save(user);
         kafkaTemplate.send("CartId", user.getUserId());
-        logger.info (user.getUserId() + "is published to kafka topic ");
-//        this.restTemplate.postForObject("http://cart-service/cart/addCart/" + user.getUserId(), user, Void.class);
+        logger.info(user.getUserId(), "{} is published to kafka topic ");
         return user;
     }
 
@@ -60,19 +59,16 @@ public class ProfileServiceImpl implements ProfileService {
 
     @Override
     public UserProfile getByProfileId(String userId) throws UserNotFoundException {
-        if(repo.findById(userId).isEmpty())
-        {
-            throw  new UserNotFoundException("User Not Found with UserId " + userId);
-        }
-
-        return repo.findById(userId).get();
+        Optional<UserProfile> user = repo.findById(userId);
+        if (user.isPresent()) {
+            return user.get();
+        } else throw new UserNotFoundException("User Not Found with UserId " + userId);
     }
 
     @Override
-    public UserProfile getByUserName(String userFullName) throws UserNotFoundException{
-        if(repo.findByuserFullName(userFullName) == null)
-        {
-            throw  new UserNotFoundException("User Not Found with UserName " + userFullName);
+    public UserProfile getByUserName(String userFullName) throws UserNotFoundException {
+        if (repo.findByuserFullName(userFullName) == null) {
+            throw new UserNotFoundException("User Not Found with UserName " + userFullName);
         }
 
         return repo.findByuserFullName(userFullName);

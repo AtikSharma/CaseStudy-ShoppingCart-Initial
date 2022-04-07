@@ -42,32 +42,32 @@ public class CartServiceImpl implements CartService {
 	@Override
 	@KafkaListener(topics = "CartId" , groupId = "online-shopping-app" , containerFactory = "kafkaListenerContainerFactory")
 	public void addCart(String userId) {
-		cartRepo.save(new Cart(userId, 0, new ArrayList<Items>()));
+		cartRepo.save(new Cart(userId, 0, new ArrayList<>()));
 	}
 
 	@Override
 	public Cart addToCart(Items item, String userId) {
 		boolean isQuantityUpdated = false;
-		Cart cartFromDb = cartRepo.findBycartId(userId);
-		item = getPriceOfItem(item);
+		Cart cartFromDb = cartRepo.findBycartId(userId); //finding cart by userId
+		item = getPriceOfItem(item); //getting price of the items of the new cart
 		
 		for(Items dbCartItem: cartFromDb.getItems())
 		{
-			if(item.getProductId().equals(dbCartItem.getProductId()))
+			if(item.getProductId().equals(dbCartItem.getProductId())) //checking for same items
 			{
-				dbCartItem.setQuantity(item.getQuantity()+dbCartItem.getQuantity());
+				dbCartItem.setQuantity(item.getQuantity()+dbCartItem.getQuantity()); //updating quantity in db
 				isQuantityUpdated = true;
 				break;
 			}
 		}
 		
-		if(isQuantityUpdated == false)
+		if(isQuantityUpdated == false) //if all items are new
 		{
-			cartFromDb.getItems().add(item);
-			cartFromDb.setItems(cartFromDb.getItems());
+			cartFromDb.getItems().add(item); // adding them to previously added items
+			cartFromDb.setItems(cartFromDb.getItems()); // saving in db
 		}
-		cartFromDb.setTotalPrice(cartTotal(cartFromDb));
-		return cartRepo.save(cartFromDb);
+		cartFromDb.setTotalPrice(cartTotal(cartFromDb)); // updating the cart total value
+		return cartRepo.save(cartFromDb); //saving cart
 	}
 	
 	@Override

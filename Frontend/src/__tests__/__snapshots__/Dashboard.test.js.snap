@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="p-3 text-center"
+>
+  <div
+    className="shadow m-auto rounded w-75  p-3 h-100 card"
+    style={
+      Object {
+        "backgroundColor": "#F4FCD9",
+      }
+    }
+  >
+    <h5
+      className="rounded shadow-sm text-center text-light card-header"
+      style={
+        Object {
+          "backgroundColor": "#BB9981",
+        }
+      }
+    >
+      Dashboard
+    </h5>
+    <div
+      className="card-body"
+    >
+      <ul
+        class="list-group "
+      >
+        <li
+          class="row"
+        >
+          <div
+            class="col-3 rounded "
+          >
+            <li
+              class="list-group-item m-1 rounded shadow-sm fw-bold"
+            >
+              UserId
+            </li>
+            <li
+              class="list-group-item m-1 rounded shadow-sm fw-bold"
+            >
+              Name
+            </li>
+            <li
+              class="list-group-item m-1 rounded shadow-sm fw-bold"
+            >
+              Email
+            </li>
+            <li
+              class="list-group-item m-1 rounded shadow-sm fw-bold"
+            >
+              Gender
+            </li>
+            <li
+              class="list-group-item m-1 rounded shadow-sm fw-bold"
+            >
+              Contact Number
+            </li>
+            <li
+              class="list-group-item m-1 rounded shadow-sm fw-bold"
+            >
+              DOB
+            </li>
+            <li
+              class="list-group-item m-1 rounded shadow-sm fw-bold"
+            >
+              Role
+            </li>
+            <li
+              class="list-group-item m-1 rounded shadow-sm fw-bold"
+            >
+              Address
+            </li>
+          </div>
+          <div
+            class="col-9 rounded"
+          >
+            <li
+              class="list-group-item m-1 rounded shadow-sm"
+            />
+            <li
+              class="list-group-item m-1 rounded shadow-sm"
+            />
+            <li
+              class="list-group-item m-1 rounded shadow-sm"
+            />
+            <li
+              class="list-group-item m-1 rounded shadow-sm"
+            />
+            <li
+              class="list-group-item m-1 rounded shadow-sm"
+            />
+            <li
+              class="list-group-item m-1 rounded shadow-sm"
+            />
+            <li
+              class="list-group-item m-1 rounded shadow-sm"
+            />
+            <div
+              class="list-group m-1 rounded shadow-sm "
+            >
+              <select
+                class="form-select text-center"
+              >
+                 No Addresses
+              </select>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

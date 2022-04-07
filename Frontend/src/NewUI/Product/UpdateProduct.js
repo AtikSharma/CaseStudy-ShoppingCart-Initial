@@ -71,7 +71,11 @@ function UpdateProduct() {
         updateSuccess();
       },
       (error) => {
-        console.log(error);
+        error.response.data.map((error) =>
+        toast.error(`${error}`, {
+          position: "bottom-right",
+        })
+      );
       }
     );
   };

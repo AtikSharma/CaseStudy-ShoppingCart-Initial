@@ -5,76 +5,46 @@ import { toast } from "react-toastify";
 import Base from "../core/Base";
 import { checkAuthentication } from "./../Auth/helper/authHelper";
 import api from "./../api/webapi";
+import {
+  getAllProductFromServer,
+  getAllCategories,
+  getProductByCategory,
+} from "./helper/updateHelper";
 
 function AllProducts() {
+  const [Products, setProducts] = useState([]);
   const [Categories, setCategories] = useState({});
-  const currentUser = checkAuthentication();
 
-  //fucntion to call server
-  const getAllProductFromServer = () => {
-    axios.get(`${api}/product/getAllProducts`).then(
-      (response) => {
-        setProducts(response.data);
-        toast.success("Products Loaded", {
-          position: "bottom-center",
-          autoClose: 1000,
-        });
-      },
-      (error) => {
-        console.log(error);
-        toast.error("Something went wrong", {
-          position: "bottom-center",
-          autoClose: 1000,
-        });
-      }
-    );
+  const getProducts = async () => {
+    let res = await getAllProductFromServer();
+    setProducts(res.data);
   };
 
-  const getAllCategories = () => {
-    axios.get(`${api}/category/allCategories`).then(
-      (response) => {
-        setCategories(response.data);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+  const getCategories = async () => {
+    let res = await getAllCategories();
+    setCategories(res.data);
   };
 
-  const selectCategory = (name) => {
-    axios
-      .get(`${api}/product/getProduct/category/${name}`, {
-        headers: {
-          "Content-type": "application/json",
-          Authentication: `Bearer ${currentUser.jwt}`,
-        },
-      })
-      .then(
-        (response) => {
-          console.log(response.data);
-          setProducts(response.data);
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
+  const selectCategory = async (name) => {
+    let res = await getProductByCategory(name);
+    setProducts(res.data);
   };
 
-  //callign loading products funciton
   useEffect(() => {
-    getAllProductFromServer();
-    getAllCategories();
+    getProducts();
+    getCategories();
     document.title = "Manage Products";
   }, []);
-
-  const [Products, setProducts] = useState([]);
 
   const removeProductById = (id) => {
     setProducts(Products.filter((c) => c.productId !== id));
   };
 
   return (
-    <Base title="Manage Products" description="">
+    <Base
+      title="Manage Products"
+      description="Update product details or delete them"
+    >
       <div class="row">
         <div className="col-2">
           <div class="list-group">
@@ -84,43 +54,57 @@ function AllProducts() {
             >
               Categories
             </div>
-            <div
-              class="list-group-item list-group-item-action "
-              onClick={() => {
-                getAllProductFromServer();
-              }}
-            >
-              All Categories
-            </div>
-            {Categories.length > 0
-              ? Categories.map((category) => (
-                  <div
-                    class="list-group-item list-group-item-action "
-                    aria-current="true"
-                    key={category.categoryId}
-                    onClick={() => {
-                      selectCategory(category.categoryName);
-                    }}
-                  >
-                    {category.categoryName}
-                  </div>
-                ))
-              : "No Category Found"}
+            {Categories.length > 0 && (
+              <div
+                class="list-group-item list-group-item-action "
+                onClick={() => {
+                  getProducts();
+                }}
+              >
+                All Categories
+              </div>
+            )}
+            {Categories.length > 0 ? (
+              Categories.map((category) => (
+                <div
+                  class="list-group-item list-group-item-action "
+                  aria-current="true"
+                  key={category.categoryId}
+                  onClick={() => {
+                    selectCategory(category.categoryName);
+                  }}
+                >
+                  {category.categoryName}
+                </div>
+              ))
+            ) : (
+              <div class="list-group-item list-group-item ">No Category</div>
+            )}
           </div>
         </div>
         <div class="col">
-          <div class="row row-cols-1 row-cols-md-5 g-2 ">
-            {Products.length > 0
-              ? Products.map((product) => (
-                  <Product
-                    key={product.productId}
-                    product={product}
-                    update={removeProductById}
-                    adminButtons={true}
-                    addtoCartButton={false}
-                  />
-                ))
-              : "No Products"}
+          <div
+            class="row row-cols-1 row-cols-md-5 g-2 "
+            data-testid="productsList"
+          >
+            {Products.length > 0 ? (
+              Products.map((product) => (
+                <Product
+                  key={product.productId}
+                  product={product}
+                  update={removeProductById}
+                  adminButtons={true}
+                  addtoCartButton={false}
+                />
+              ))
+            ) : (
+              <div
+                class="alert alert-warning m-auto w-50 text-center shadow mt-1"
+                role="alert"
+              >
+                No Products Found
+              </div>
+            )}
           </div>
         </div>
       </div>

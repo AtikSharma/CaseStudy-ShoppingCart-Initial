@@ -1,7 +1,12 @@
 package com.webcontroller.security.model;
 
+import javax.validation.constraints.NotBlank;
+
 public class AuthenticationRequest {
+
+    @NotBlank(message = "Username can't be empty")
     private String username;
+    @NotBlank(message = "Password can't be empty")
     private String password;
 
     public AuthenticationRequest(){}

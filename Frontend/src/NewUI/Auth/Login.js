@@ -8,42 +8,41 @@ import Base from "../core/Base";
 import { toast } from "react-toastify";
 import { checkAuthentication } from "./helper/authHelper";
 import { loadCart } from "../Cart/helper/cartHelper";
-import { loadUser } from './../User/helper/userProfile';
-import { loadOrders } from './../Order/helper/loadOrders';
+import { loadUser } from "./../User/helper/userProfile";
+import { loadOrders } from "./../Order/helper/loadOrders";
 
 function Login() {
   const [LoginDetail, setLoginDetail] = useState({});
   let didRedirect = false;
   const msg = document.getElementById("msg");
 
-
-
   const handleForm = (e) => {
-    console.log(LoginDetail);
     postDataToAuthenticate(LoginDetail);
     e.preventDefault();
   };
 
-  const displayError = () => {
-    msg.style.display = "block";
-  };
+  // const displayError = (message) => {
+  //   msg.style.display = "block";
+  //   msg.innerHTML = message;
+  // };
 
   const postDataToAuthenticate = (data) => {
     axios.post(`${api}/authenticate`, data).then(
       (response) => {
         didRedirect = true;
         localStorage.setItem("jwt", JSON.stringify(response.data));
-
-        toast.success("Login Successful!" ,{
+        toast.success(`Welcome ${data.username}`, {
           position: "bottom-center",
-          autoClose: 1000
-        })
+          autoClose: 1000,
+        });
         performRedirect();
-        
       },
       (error) => {
-        console.log(error);
-        displayError();
+        error.response.data.map((error) => {
+          toast.error(`${error}`, {
+            position: "bottom-right",
+          });
+        });
       }
     );
   };
@@ -55,7 +54,7 @@ function Login() {
     if (user) {
       loadUser(user.profile.userId);
       loadCart(user.profile.userId);
-      loadOrders(user.profile.userId)
+      loadOrders(user.profile.userId);
       navigate("/");
     }
   };
@@ -99,14 +98,14 @@ function Login() {
             </Col>
           </FormGroup>
 
-          <div
+          {/* <div
             class="alert alert-danger"
             role="alert"
             id="msg"
             style={{ display: "none" }}
           >
             Invalid username or password
-          </div>
+          </div> */}
 
           {/* BUttonss */}
           <div className="text-center ">

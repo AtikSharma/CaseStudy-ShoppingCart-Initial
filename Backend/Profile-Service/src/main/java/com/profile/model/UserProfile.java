@@ -1,12 +1,13 @@
 package com.profile.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.Valid;
+import javax.validation.constraints.*;
 import java.util.List;
 
 
@@ -18,15 +19,31 @@ public class UserProfile {
 
     @Id
     private String userId;
+
+    @NotBlank(message = "Name must be Provided")
     private String userFullName;
+
     private String userImage;
+
+    @Email(message = "Email format should be xyz@email.com")
+    @NotBlank(message = "Email must be Provided")
     private String userEmail;
+
+    @Min(value = 999999999, message = "Mobile no must be of 10 digits")
+    @Max(value = 9999999999L, message = "Mobile no must be of 10 digits")
     private long userMobileNo;
+
     private String about;
     private String dateOfBirth;
     private String gender;
+
+    @NotBlank(message = "Role can't be empty")
     private String userRole;
+
+    @NotBlank(message = "Password can't be null")
     private String userPassword;
+
+    @Valid
     private List<Address> userAddresses;
 
     public String getUserId() {

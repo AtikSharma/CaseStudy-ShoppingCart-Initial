@@ -21,6 +21,10 @@ function Login() {
     e.preventDefault();
   };
 
+  useEffect(() => {
+    document.title = "Login";
+  }, []);
+
   // const displayError = (message) => {
   //   msg.style.display = "block";
   //   msg.innerHTML = message;

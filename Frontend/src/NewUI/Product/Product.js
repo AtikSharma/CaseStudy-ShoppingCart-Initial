@@ -45,7 +45,7 @@ const Product = ({ product, update, adminButtons, addtoCartButton }) => {
         },
         (error) => {
           console.log(error);
-          toast.error("Some error Occured", {
+          toast.error("Failed to Add", {
             position: "bottom-center",
             autoClose: 750,
           });
@@ -74,11 +74,12 @@ const Product = ({ product, update, adminButtons, addtoCartButton }) => {
             </Link>
 
             <div
-              class="btn btn-outline-danger rounded  btn-sm "
+              className="btn btn-outline-danger rounded  btn-sm "
               onClick={() => {
                 console.log(product);
                 deleteProduct(product.productId);
               }}
+              data_testid = "deleteButton"
             >
               Delete
             </div>
@@ -87,7 +88,7 @@ const Product = ({ product, update, adminButtons, addtoCartButton }) => {
 
         {addtoCartButton && (
           <div
-            class="btn btn-outline-danger rounded  btn-sm "
+            className="btn btn-outline-danger rounded  btn-sm "
             onClick={() => {
               localStorage.getItem("jwt")
                 ? addToCart()

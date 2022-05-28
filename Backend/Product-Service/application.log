@@ -1,659 +1,120 @@
-2022-04-05 14:01:45,881 INFO  StartupInfoLogger:55 - [] Starting ProductServiceApplicationTests using Java 16 on LIN24009701 with PID 16504 (started by atisharm in C:\Users\atisharm\Desktop\My GitHub Repo\CaseStudy-ShoppingCart-NewTech\Backend\Product-Service)
-2022-04-05 14:01:45,889 INFO  SpringApplication:637 - [] No active profile set, falling back to default profiles: default
-2022-04-05 14:01:46,784 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-05 14:01:46,923 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 130 ms. Found 2 JPA repository interfaces.
-2022-04-05 14:01:47,229 INFO  GenericScope:283 - [] BeanFactory id=e17bbcdc-fb9a-3a43-a7aa-81d9da0130d9
-2022-04-05 14:01:47,720 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-05 14:01:47,794 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.4.Final
-2022-04-05 14:01:48,013 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-04-05 14:01:48,172 INFO  HikariDataSource:110 - [] test - Starting...
-2022-04-05 14:01:48,479 INFO  HikariDataSource:123 - [] test - Start completed.
-2022-04-05 14:01:48,499 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-04-05 14:01:49,112 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-05 14:01:49,120 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:01:50,367 WARN  JpaBaseConfiguration$JpaWebConfiguration:219 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-05 14:01:53,412 INFO  DiscoveryClientOptionalArgsConfiguration:68 - [] Eureka HTTP Client uses RestTemplate.
-2022-04-05 14:01:53,730 WARN  LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:82 - [] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-04-05 14:01:53,759 INFO  InstanceInfoFactory:67 - [] Setting initial instance status as: STARTING
-2022-04-05 14:01:53,874 INFO  DiscoveryClient:372 - [] Initializing Eureka in region us-east-1
-2022-04-05 14:01:53,885 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
-2022-04-05 14:01:53,914 INFO  DiscoveryClient:1007 - [] Disable delta property : false
-2022-04-05 14:01:53,915 INFO  DiscoveryClient:1008 - [] Single vip registry refresh property : null
-2022-04-05 14:01:53,915 INFO  DiscoveryClient:1009 - [] Force full registry fetch : false
-2022-04-05 14:01:53,915 INFO  DiscoveryClient:1010 - [] Application is null : false
-2022-04-05 14:01:53,915 INFO  DiscoveryClient:1011 - [] Registered Applications size is zero : true
-2022-04-05 14:01:53,916 INFO  DiscoveryClient:1013 - [] Application version is -1: true
-2022-04-05 14:01:53,916 INFO  DiscoveryClient:1097 - [] Getting all instance registry info from the eureka server
-2022-04-05 14:01:54,239 INFO  DiscoveryClient:1106 - [] The response status is 200
-2022-04-05 14:01:54,242 INFO  DiscoveryClient:1321 - [] Starting heartbeat executor: renew interval is: 30
-2022-04-05 14:01:54,246 INFO  InstanceInfoReplicator:60 - [] InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-04-05 14:01:54,251 INFO  DiscoveryClient:492 - [] Discovery Client initialized at timestamp 1649147514250 with initial instances count: 4
-2022-04-05 14:01:54,267 INFO  EurekaServiceRegistry:41 - [] Registering application PRODUCT-SERVICE with eureka with status UP
-2022-04-05 14:01:54,268 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649147514268, current=UP, previous=STARTING]
-2022-04-05 14:01:54,270 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:01:54,283 INFO  StartupInfoLogger:61 - [] Started ProductServiceApplicationTests in 8.862 seconds (JVM running for 11.301)
-2022-04-05 14:01:54,319 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:01:54,510 INFO  AbstractTestContextBootstrapper:305 - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.product.service.category.CategoryServiceImplTest], using SpringBootContextLoader
-2022-04-05 14:01:54,510 INFO  AbstractContextLoader:264 - [] Could not detect default resource locations for test class [com.product.service.category.CategoryServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-04-05 14:01:54,511 INFO  AnnotationConfigContextLoaderUtils:83 - [] Could not detect default configuration classes for test class [com.product.service.category.CategoryServiceImplTest]: CategoryServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-04-05 14:01:54,518 INFO  SpringBootTestContextBootstrapper:238 - [] Found @SpringBootConfiguration com.product.ProductServiceApplication for test class com.product.service.category.CategoryServiceImplTest
-2022-04-05 14:01:54,520 INFO  AbstractTestContextBootstrapper:245 - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-04-05 14:01:54,521 INFO  AbstractTestContextBootstrapper:174 - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4c24063c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3dd22110, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6cf71064, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4b9b57d9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2762bd70, org.springframework.test.context.support.DirtiesContextTestExecutionListener@b94c22d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5fb4870b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4e8036bb, org.springframework.test.context.event.EventPublishingTestExecutionListener@7c3b8b26, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5113ab26, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2a64e2d0, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@651e3cc9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@45dce9f7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@9da20f1, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4a52178]
-2022-04-05 14:01:54,689 INFO  AbstractTestContextBootstrapper:305 - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.product.service.ProductServiceImplTest], using SpringBootContextLoader
-2022-04-05 14:01:54,691 INFO  AbstractContextLoader:264 - [] Could not detect default resource locations for test class [com.product.service.ProductServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-04-05 14:01:54,700 INFO  AbstractTestContextBootstrapper:245 - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-04-05 14:01:54,701 INFO  AbstractTestContextBootstrapper:174 - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@33ef701e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1fd1deed, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@814b60b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@515a897c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@197d6cc9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@8caffbd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@25c3a441, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2057d8ec, org.springframework.test.context.event.EventPublishingTestExecutionListener@52bef30b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@d56d9f6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@358f85b1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2b01bb54, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@e822394, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3520d2db, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7c4b7bc3]
-2022-04-05 14:01:54,923 INFO  StartupInfoLogger:55 - [] Starting ProductServiceApplication using Java 16 on LIN24009701 with PID 16504 (started by atisharm in C:\Users\atisharm\Desktop\My GitHub Repo\CaseStudy-ShoppingCart-NewTech\Backend\Product-Service)
-2022-04-05 14:01:54,923 INFO  SpringApplication:637 - [] No active profile set, falling back to default profiles: default
-2022-04-05 14:01:55,158 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-05 14:01:55,178 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 19 ms. Found 2 JPA repository interfaces.
-2022-04-05 14:01:55,233 INFO  GenericScope:283 - [] BeanFactory id=854e8e93-77a3-3b6e-ad9e-ad551e950256
-2022-04-05 14:01:55,409 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 7002 (http)
-2022-04-05 14:01:55,420 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
-2022-04-05 14:01:55,421 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-04-05 14:01:55,625 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
-2022-04-05 14:01:55,625 INFO  ServletWebServerApplicationContext:290 - [] Root WebApplicationContext: initialization completed in 699 ms
-2022-04-05 14:01:55,718 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-05 14:01:55,724 INFO  HikariDataSource:110 - [] test - Starting...
-2022-04-05 14:01:55,746 INFO  HikariDataSource:123 - [] test - Start completed.
-2022-04-05 14:01:55,747 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-04-05 14:01:55,781 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-05 14:01:55,782 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:01:55,885 WARN  JpaBaseConfiguration$JpaWebConfiguration:219 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-05 14:01:56,694 INFO  DiscoveryClientOptionalArgsConfiguration:68 - [] Eureka HTTP Client uses RestTemplate.
-2022-04-05 14:01:56,791 WARN  LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:82 - [] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-04-05 14:01:56,800 INFO  InstanceInfoFactory:67 - [] Setting initial instance status as: STARTING
-2022-04-05 14:01:56,803 INFO  DiscoveryClient:372 - [] Initializing Eureka in region us-east-1
-2022-04-05 14:01:56,804 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
-2022-04-05 14:01:56,806 INFO  DiscoveryClient:1007 - [] Disable delta property : false
-2022-04-05 14:01:56,806 INFO  DiscoveryClient:1008 - [] Single vip registry refresh property : null
-2022-04-05 14:01:56,806 INFO  DiscoveryClient:1009 - [] Force full registry fetch : false
-2022-04-05 14:01:56,807 INFO  DiscoveryClient:1010 - [] Application is null : false
-2022-04-05 14:01:56,807 INFO  DiscoveryClient:1011 - [] Registered Applications size is zero : true
-2022-04-05 14:01:56,807 INFO  DiscoveryClient:1013 - [] Application version is -1: true
-2022-04-05 14:01:56,807 INFO  DiscoveryClient:1097 - [] Getting all instance registry info from the eureka server
-2022-04-05 14:01:56,830 INFO  DiscoveryClient:1106 - [] The response status is 200
-2022-04-05 14:01:56,832 INFO  DiscoveryClient:1321 - [] Starting heartbeat executor: renew interval is: 30
-2022-04-05 14:01:56,835 INFO  InstanceInfoReplicator:60 - [] InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-04-05 14:01:56,837 INFO  DiscoveryClient:492 - [] Discovery Client initialized at timestamp 1649147516837 with initial instances count: 4
-2022-04-05 14:01:56,841 INFO  EurekaServiceRegistry:41 - [] Registering application PRODUCT-SERVICE with eureka with status UP
-2022-04-05 14:01:56,841 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649147516841, current=UP, previous=STARTING]
-2022-04-05 14:01:56,842 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:01:56,870 WARN  AbstractApplicationContext:591 - [] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 7002 is already in use
-2022-04-05 14:01:56,874 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:01:56,874 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:01:56,876 INFO  HikariDataSource:350 - [] test - Shutdown initiated...
-2022-04-05 14:01:56,883 INFO  HikariDataSource:352 - [] test - Shutdown completed.
-2022-04-05 14:01:56,883 INFO  DiscoveryClient:935 - [] Shutting down DiscoveryClient ...
-2022-04-05 14:01:59,899 INFO  DiscoveryClient:971 - [] Unregistering ...
-2022-04-05 14:01:59,906 INFO  DiscoveryClient:973 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - deregister  status: 200
-2022-04-05 14:01:59,911 INFO  DiscoveryClient:960 - [] Completed shut down of DiscoveryClient
-2022-04-05 14:01:59,912 INFO  DirectJDKLog:173 - [] Stopping service [Tomcat]
-2022-04-05 14:01:59,920 INFO  ConditionEvaluationReportLoggingListener:136 - [] 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-04-05 14:01:59,949 ERROR LoggingFailureAnalysisReporter:40 - [] 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 7002 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 7002 or configure this application to listen on another port.
-
-2022-04-05 14:01:59,963 INFO  AbstractTestContextBootstrapper:305 - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.product.resource.CategoryResourceTest], using SpringBootContextLoader
-2022-04-05 14:01:59,965 INFO  AbstractContextLoader:264 - [] Could not detect default resource locations for test class [com.product.resource.CategoryResourceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-04-05 14:01:59,965 INFO  AnnotationConfigContextLoaderUtils:83 - [] Could not detect default configuration classes for test class [com.product.resource.CategoryResourceTest]: CategoryResourceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-04-05 14:01:59,972 INFO  SpringBootTestContextBootstrapper:238 - [] Found @SpringBootConfiguration com.product.ProductServiceApplication for test class com.product.resource.CategoryResourceTest
-2022-04-05 14:01:59,974 INFO  AbstractTestContextBootstrapper:245 - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-04-05 14:01:59,975 INFO  AbstractTestContextBootstrapper:174 - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@74f23ecc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7ec416a0, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1cbb6037, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2cfd91b9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@491cceb4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@17b3b021, org.springframework.test.context.transaction.TransactionalTestExecutionListener@504ed038, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@10fef3d1, org.springframework.test.context.event.EventPublishingTestExecutionListener@3fb8e614, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@35007b7a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@13e9a2f2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@74eebb25, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@c1e7bea, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3af30ab8, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6453c126]
-2022-04-05 14:02:00,009 INFO  AbstractTestContextBootstrapper:305 - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.product.resource.ProductResourceTest], using SpringBootContextLoader
-2022-04-05 14:02:00,011 INFO  AbstractContextLoader:264 - [] Could not detect default resource locations for test class [com.product.resource.ProductResourceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-04-05 14:02:00,011 INFO  AnnotationConfigContextLoaderUtils:83 - [] Could not detect default configuration classes for test class [com.product.resource.ProductResourceTest]: ProductResourceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-04-05 14:02:00,012 INFO  SpringBootTestContextBootstrapper:238 - [] Found @SpringBootConfiguration com.product.ProductServiceApplication for test class com.product.resource.ProductResourceTest
-2022-04-05 14:02:00,014 INFO  AbstractTestContextBootstrapper:245 - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-04-05 14:02:00,014 INFO  AbstractTestContextBootstrapper:174 - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@50f6eb17, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7bc3e36b, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@335aac7a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4f347aae, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@287d9e0c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4cc1f8d3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2a9eb44d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@46135aba, org.springframework.test.context.event.EventPublishingTestExecutionListener@25a218a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@411e5672, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1efdaec0, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@42e7e12f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@11e2de88, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@227ca700, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@51049621]
-2022-04-05 14:02:00,132 INFO  ProductResource:48 - [] http://localhost/image/Image.jpeg
-2022-04-05 14:02:00,156 INFO  EurekaServiceRegistry:62 - [] Unregistering application PRODUCT-SERVICE with eureka with status DOWN
-2022-04-05 14:02:00,156 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649147520156, current=DOWN, previous=UP]
-2022-04-05 14:02:00,156 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:02:00,161 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:02:00,161 INFO  HikariDataSource:350 - [] test - Shutdown initiated...
-2022-04-05 14:02:00,162 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:02:00,165 INFO  HikariDataSource:352 - [] test - Shutdown completed.
-2022-04-05 14:02:00,166 INFO  DiscoveryClient:935 - [] Shutting down DiscoveryClient ...
-2022-04-05 14:02:03,183 INFO  DiscoveryClient:971 - [] Unregistering ...
-2022-04-05 14:02:03,186 INFO  DiscoveryClient:973 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - deregister  status: 200
-2022-04-05 14:02:03,189 INFO  DiscoveryClient:960 - [] Completed shut down of DiscoveryClient
-2022-04-05 14:02:35,552 INFO  StartupInfoLogger:55 - [] Starting ProductServiceApplicationTests using Java 16 on LIN24009701 with PID 25532 (started by atisharm in C:\Users\atisharm\Desktop\My GitHub Repo\CaseStudy-ShoppingCart-NewTech\Backend\Product-Service)
-2022-04-05 14:02:35,555 INFO  SpringApplication:637 - [] No active profile set, falling back to default profiles: default
-2022-04-05 14:02:36,757 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-05 14:02:36,970 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 198 ms. Found 2 JPA repository interfaces.
-2022-04-05 14:02:37,419 INFO  GenericScope:283 - [] BeanFactory id=e17bbcdc-fb9a-3a43-a7aa-81d9da0130d9
-2022-04-05 14:02:38,242 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-05 14:02:38,318 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.4.Final
-2022-04-05 14:02:38,544 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-04-05 14:02:38,740 INFO  HikariDataSource:110 - [] test - Starting...
-2022-04-05 14:02:39,343 INFO  HikariDataSource:123 - [] test - Start completed.
-2022-04-05 14:02:39,369 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-04-05 14:02:40,284 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-05 14:02:40,294 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:02:41,330 WARN  JpaBaseConfiguration$JpaWebConfiguration:219 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-05 14:02:44,357 INFO  DiscoveryClientOptionalArgsConfiguration:68 - [] Eureka HTTP Client uses RestTemplate.
-2022-04-05 14:02:44,772 WARN  LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:82 - [] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-04-05 14:02:44,812 INFO  InstanceInfoFactory:67 - [] Setting initial instance status as: STARTING
-2022-04-05 14:02:44,928 INFO  DiscoveryClient:372 - [] Initializing Eureka in region us-east-1
-2022-04-05 14:02:44,937 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
-2022-04-05 14:02:44,974 INFO  DiscoveryClient:1007 - [] Disable delta property : false
-2022-04-05 14:02:44,975 INFO  DiscoveryClient:1008 - [] Single vip registry refresh property : null
-2022-04-05 14:02:44,976 INFO  DiscoveryClient:1009 - [] Force full registry fetch : false
-2022-04-05 14:02:44,976 INFO  DiscoveryClient:1010 - [] Application is null : false
-2022-04-05 14:02:44,976 INFO  DiscoveryClient:1011 - [] Registered Applications size is zero : true
-2022-04-05 14:02:44,977 INFO  DiscoveryClient:1013 - [] Application version is -1: true
-2022-04-05 14:02:44,977 INFO  DiscoveryClient:1097 - [] Getting all instance registry info from the eureka server
-2022-04-05 14:02:45,411 INFO  DiscoveryClient:1106 - [] The response status is 200
-2022-04-05 14:02:45,416 INFO  DiscoveryClient:1321 - [] Starting heartbeat executor: renew interval is: 30
-2022-04-05 14:02:45,420 INFO  InstanceInfoReplicator:60 - [] InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-04-05 14:02:45,430 INFO  DiscoveryClient:492 - [] Discovery Client initialized at timestamp 1649147565429 with initial instances count: 3
-2022-04-05 14:02:45,436 INFO  EurekaServiceRegistry:41 - [] Registering application PRODUCT-SERVICE with eureka with status UP
-2022-04-05 14:02:45,437 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649147565437, current=UP, previous=STARTING]
-2022-04-05 14:02:45,440 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:02:45,459 INFO  StartupInfoLogger:61 - [] Started ProductServiceApplicationTests in 10.815 seconds (JVM running for 13.096)
-2022-04-05 14:02:45,530 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:02:45,734 INFO  AbstractTestContextBootstrapper:305 - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.product.resource.CategoryResourceTest], using SpringBootContextLoader
-2022-04-05 14:02:45,735 INFO  AbstractContextLoader:264 - [] Could not detect default resource locations for test class [com.product.resource.CategoryResourceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-04-05 14:02:45,736 INFO  AnnotationConfigContextLoaderUtils:83 - [] Could not detect default configuration classes for test class [com.product.resource.CategoryResourceTest]: CategoryResourceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-04-05 14:02:45,747 INFO  SpringBootTestContextBootstrapper:238 - [] Found @SpringBootConfiguration com.product.ProductServiceApplication for test class com.product.resource.CategoryResourceTest
-2022-04-05 14:02:45,749 INFO  AbstractTestContextBootstrapper:245 - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-04-05 14:02:45,751 INFO  AbstractTestContextBootstrapper:174 - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@68152758, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4fdbd7c5, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@689daa5c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@31bb398e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7055f706, org.springframework.test.context.support.DirtiesContextTestExecutionListener@61217336, org.springframework.test.context.transaction.TransactionalTestExecutionListener@646bea04, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@cf4d84e, org.springframework.test.context.event.EventPublishingTestExecutionListener@5346e311, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3914828c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2147460, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2808eac4, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4cb2dabf, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@512f2147, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7039e876]
-2022-04-05 14:02:45,890 INFO  AbstractTestContextBootstrapper:305 - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.product.resource.ProductResourceTest], using SpringBootContextLoader
-2022-04-05 14:02:45,891 INFO  AbstractContextLoader:264 - [] Could not detect default resource locations for test class [com.product.resource.ProductResourceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-04-05 14:02:45,892 INFO  AnnotationConfigContextLoaderUtils:83 - [] Could not detect default configuration classes for test class [com.product.resource.ProductResourceTest]: ProductResourceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-04-05 14:02:45,894 INFO  SpringBootTestContextBootstrapper:238 - [] Found @SpringBootConfiguration com.product.ProductServiceApplication for test class com.product.resource.ProductResourceTest
-2022-04-05 14:02:45,897 INFO  AbstractTestContextBootstrapper:245 - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-04-05 14:02:45,898 INFO  AbstractTestContextBootstrapper:174 - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@558e6e06, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4047789d, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5b9b02a1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3979d3b0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1f2164c7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6459742e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6754ec0e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@10c75707, org.springframework.test.context.event.EventPublishingTestExecutionListener@4d40e84, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2b03f234, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6bf75fc6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@41a252d0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@65a6c44e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5100089c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@586415]
-2022-04-05 14:02:46,172 INFO  ProductResource:48 - [] http://localhost/image/Image.jpeg
-2022-04-05 14:02:46,186 INFO  AbstractTestContextBootstrapper:305 - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.product.service.category.CategoryServiceImplTest], using SpringBootContextLoader
-2022-04-05 14:02:46,188 INFO  AbstractContextLoader:264 - [] Could not detect default resource locations for test class [com.product.service.category.CategoryServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-04-05 14:02:46,188 INFO  AnnotationConfigContextLoaderUtils:83 - [] Could not detect default configuration classes for test class [com.product.service.category.CategoryServiceImplTest]: CategoryServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-04-05 14:02:46,200 INFO  SpringBootTestContextBootstrapper:238 - [] Found @SpringBootConfiguration com.product.ProductServiceApplication for test class com.product.service.category.CategoryServiceImplTest
-2022-04-05 14:02:46,203 INFO  AbstractTestContextBootstrapper:245 - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-04-05 14:02:46,204 INFO  AbstractTestContextBootstrapper:174 - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3a14e7f3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1fdc3182, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@67b21c0b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7bed22c9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@665b7938, org.springframework.test.context.support.DirtiesContextTestExecutionListener@18f51450, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6fd00101, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7d399d58, org.springframework.test.context.event.EventPublishingTestExecutionListener@4096b97e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@707172a8, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1f46bdae, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2e243043, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5b8c31b0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2013ec5b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@a928e3a]
-2022-04-05 14:02:46,276 INFO  AbstractTestContextBootstrapper:305 - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.product.service.ProductServiceImplTest], using SpringBootContextLoader
-2022-04-05 14:02:46,277 INFO  AbstractContextLoader:264 - [] Could not detect default resource locations for test class [com.product.service.ProductServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-04-05 14:02:46,280 INFO  AbstractTestContextBootstrapper:245 - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-04-05 14:02:46,281 INFO  AbstractTestContextBootstrapper:174 - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@129923f9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@471bc4c5, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@393b6884, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@72b9c9ed, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2964baa8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@30c07ead, org.springframework.test.context.transaction.TransactionalTestExecutionListener@525d4f79, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6e97027e, org.springframework.test.context.event.EventPublishingTestExecutionListener@62aa54fe, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@51ac7b10, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@69b2d0db, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3f60ab61, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@f5d05d7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3d1b8bd7, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@42d0b0a7]
-2022-04-05 14:02:46,500 INFO  StartupInfoLogger:55 - [] Starting ProductServiceApplication using Java 16 on LIN24009701 with PID 25532 (started by atisharm in C:\Users\atisharm\Desktop\My GitHub Repo\CaseStudy-ShoppingCart-NewTech\Backend\Product-Service)
-2022-04-05 14:02:46,501 INFO  SpringApplication:637 - [] No active profile set, falling back to default profiles: default
-2022-04-05 14:02:46,860 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-05 14:02:46,890 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 29 ms. Found 2 JPA repository interfaces.
-2022-04-05 14:02:46,994 INFO  GenericScope:283 - [] BeanFactory id=854e8e93-77a3-3b6e-ad9e-ad551e950256
-2022-04-05 14:02:47,274 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 7002 (http)
-2022-04-05 14:02:47,289 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
-2022-04-05 14:02:47,290 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-04-05 14:02:47,475 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
-2022-04-05 14:02:47,475 INFO  ServletWebServerApplicationContext:290 - [] Root WebApplicationContext: initialization completed in 972 ms
-2022-04-05 14:02:47,593 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-05 14:02:47,602 INFO  HikariDataSource:110 - [] test - Starting...
-2022-04-05 14:02:47,626 INFO  HikariDataSource:123 - [] test - Start completed.
-2022-04-05 14:02:47,628 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-04-05 14:02:47,663 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-05 14:02:47,664 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:02:47,770 WARN  JpaBaseConfiguration$JpaWebConfiguration:219 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-05 14:02:48,908 INFO  DiscoveryClientOptionalArgsConfiguration:68 - [] Eureka HTTP Client uses RestTemplate.
-2022-04-05 14:02:49,039 WARN  LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:82 - [] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-04-05 14:02:49,049 INFO  InstanceInfoFactory:67 - [] Setting initial instance status as: STARTING
-2022-04-05 14:02:49,054 INFO  DiscoveryClient:372 - [] Initializing Eureka in region us-east-1
-2022-04-05 14:02:49,055 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
-2022-04-05 14:02:49,057 INFO  DiscoveryClient:1007 - [] Disable delta property : false
-2022-04-05 14:02:49,058 INFO  DiscoveryClient:1008 - [] Single vip registry refresh property : null
-2022-04-05 14:02:49,059 INFO  DiscoveryClient:1009 - [] Force full registry fetch : false
-2022-04-05 14:02:49,059 INFO  DiscoveryClient:1010 - [] Application is null : false
-2022-04-05 14:02:49,060 INFO  DiscoveryClient:1011 - [] Registered Applications size is zero : true
-2022-04-05 14:02:49,060 INFO  DiscoveryClient:1013 - [] Application version is -1: true
-2022-04-05 14:02:49,060 INFO  DiscoveryClient:1097 - [] Getting all instance registry info from the eureka server
-2022-04-05 14:02:49,091 INFO  DiscoveryClient:1106 - [] The response status is 200
-2022-04-05 14:02:49,094 INFO  DiscoveryClient:1321 - [] Starting heartbeat executor: renew interval is: 30
-2022-04-05 14:02:49,096 INFO  InstanceInfoReplicator:60 - [] InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-04-05 14:02:49,099 INFO  DiscoveryClient:492 - [] Discovery Client initialized at timestamp 1649147569099 with initial instances count: 3
-2022-04-05 14:02:49,101 INFO  EurekaServiceRegistry:41 - [] Registering application PRODUCT-SERVICE with eureka with status UP
-2022-04-05 14:02:49,104 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649147569104, current=UP, previous=STARTING]
-2022-04-05 14:02:49,105 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:02:49,125 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:02:49,144 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 7002 (http) with context path ''
-2022-04-05 14:02:49,145 INFO  EurekaAutoServiceRegistration:144 - [] Updating port to 7002
-2022-04-05 14:02:49,253 INFO  StartupInfoLogger:61 - [] Started ProductServiceApplication in 2.88 seconds (JVM running for 16.89)
-2022-04-05 14:02:49,269 INFO  EurekaServiceRegistry:62 - [] Unregistering application PRODUCT-SERVICE with eureka with status DOWN
-2022-04-05 14:02:49,269 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649147569269, current=DOWN, previous=UP]
-2022-04-05 14:02:49,270 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:02:49,274 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:02:49,277 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:02:49,278 INFO  HikariDataSource:350 - [] test - Shutdown initiated...
-2022-04-05 14:02:49,286 INFO  HikariDataSource:352 - [] test - Shutdown completed.
-2022-04-05 14:02:49,287 INFO  DiscoveryClient:935 - [] Shutting down DiscoveryClient ...
-2022-04-05 14:02:52,305 INFO  DiscoveryClient:971 - [] Unregistering ...
-2022-04-05 14:02:52,311 INFO  DiscoveryClient:973 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - deregister  status: 200
-2022-04-05 14:02:52,315 INFO  DiscoveryClient:960 - [] Completed shut down of DiscoveryClient
-2022-04-05 14:02:52,317 INFO  EurekaServiceRegistry:62 - [] Unregistering application PRODUCT-SERVICE with eureka with status DOWN
-2022-04-05 14:02:52,318 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649147572318, current=DOWN, previous=UP]
-2022-04-05 14:02:52,318 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:02:52,322 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:02:52,334 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:02:52,335 INFO  HikariDataSource:350 - [] test - Shutdown initiated...
-2022-04-05 14:02:52,340 INFO  HikariDataSource:352 - [] test - Shutdown completed.
-2022-04-05 14:02:52,341 INFO  DiscoveryClient:935 - [] Shutting down DiscoveryClient ...
-2022-04-05 14:02:55,345 INFO  DiscoveryClient:971 - [] Unregistering ...
-2022-04-05 14:02:55,349 INFO  DiscoveryClient:973 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - deregister  status: 200
-2022-04-05 14:02:55,352 INFO  DiscoveryClient:960 - [] Completed shut down of DiscoveryClient
-2022-04-05 14:05:45,875 INFO  StartupInfoLogger:55 - [] Starting ProductServiceImplTest using Java 16 on LIN24009701 with PID 25540 (started by atisharm in C:\Users\atisharm\Desktop\My GitHub Repo\CaseStudy-ShoppingCart-NewTech\Backend\Product-Service)
-2022-04-05 14:05:45,876 INFO  SpringApplication:637 - [] No active profile set, falling back to default profiles: default
-2022-04-05 14:05:46,677 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-05 14:05:46,798 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 114 ms. Found 2 JPA repository interfaces.
-2022-04-05 14:05:47,096 INFO  GenericScope:283 - [] BeanFactory id=e17bbcdc-fb9a-3a43-a7aa-81d9da0130d9
-2022-04-05 14:05:47,518 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-05 14:05:47,573 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.4.Final
-2022-04-05 14:05:47,767 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-04-05 14:05:47,906 INFO  HikariDataSource:110 - [] test - Starting...
-2022-04-05 14:05:48,182 INFO  HikariDataSource:123 - [] test - Start completed.
-2022-04-05 14:05:48,195 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-04-05 14:05:48,745 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-05 14:05:48,754 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:05:49,466 WARN  JpaBaseConfiguration$JpaWebConfiguration:219 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-05 14:05:51,499 INFO  DiscoveryClientOptionalArgsConfiguration:68 - [] Eureka HTTP Client uses RestTemplate.
-2022-04-05 14:05:51,786 WARN  LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:82 - [] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-04-05 14:05:51,813 INFO  InstanceInfoFactory:67 - [] Setting initial instance status as: STARTING
-2022-04-05 14:05:51,895 INFO  DiscoveryClient:372 - [] Initializing Eureka in region us-east-1
-2022-04-05 14:05:51,901 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
-2022-04-05 14:05:51,924 INFO  DiscoveryClient:1007 - [] Disable delta property : false
-2022-04-05 14:05:51,925 INFO  DiscoveryClient:1008 - [] Single vip registry refresh property : null
-2022-04-05 14:05:51,925 INFO  DiscoveryClient:1009 - [] Force full registry fetch : false
-2022-04-05 14:05:51,926 INFO  DiscoveryClient:1010 - [] Application is null : false
-2022-04-05 14:05:51,926 INFO  DiscoveryClient:1011 - [] Registered Applications size is zero : true
-2022-04-05 14:05:51,926 INFO  DiscoveryClient:1013 - [] Application version is -1: true
-2022-04-05 14:05:51,927 INFO  DiscoveryClient:1097 - [] Getting all instance registry info from the eureka server
-2022-04-05 14:05:52,211 INFO  DiscoveryClient:1106 - [] The response status is 200
-2022-04-05 14:05:52,214 INFO  DiscoveryClient:1321 - [] Starting heartbeat executor: renew interval is: 30
-2022-04-05 14:05:52,217 INFO  InstanceInfoReplicator:60 - [] InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-04-05 14:05:52,222 INFO  DiscoveryClient:492 - [] Discovery Client initialized at timestamp 1649147752221 with initial instances count: 3
-2022-04-05 14:05:52,232 INFO  EurekaServiceRegistry:41 - [] Registering application PRODUCT-SERVICE with eureka with status UP
-2022-04-05 14:05:52,235 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649147752235, current=UP, previous=STARTING]
-2022-04-05 14:05:52,237 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:05:52,248 INFO  StartupInfoLogger:61 - [] Started ProductServiceImplTest in 6.794 seconds (JVM running for 7.919)
-2022-04-05 14:05:52,280 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:05:52,692 INFO  StartupInfoLogger:55 - [] Starting ProductServiceApplication using Java 16 on LIN24009701 with PID 25540 (started by atisharm in C:\Users\atisharm\Desktop\My GitHub Repo\CaseStudy-ShoppingCart-NewTech\Backend\Product-Service)
-2022-04-05 14:05:52,692 INFO  SpringApplication:637 - [] No active profile set, falling back to default profiles: default
-2022-04-05 14:05:52,930 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-05 14:05:52,952 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
-2022-04-05 14:05:53,015 INFO  GenericScope:283 - [] BeanFactory id=854e8e93-77a3-3b6e-ad9e-ad551e950256
-2022-04-05 14:05:53,207 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 7002 (http)
-2022-04-05 14:05:53,216 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
-2022-04-05 14:05:53,216 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-04-05 14:05:53,385 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
-2022-04-05 14:05:53,385 INFO  ServletWebServerApplicationContext:290 - [] Root WebApplicationContext: initialization completed in 691 ms
-2022-04-05 14:05:53,467 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-05 14:05:53,472 INFO  HikariDataSource:110 - [] test - Starting...
-2022-04-05 14:05:53,497 INFO  HikariDataSource:123 - [] test - Start completed.
-2022-04-05 14:05:53,498 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-04-05 14:05:53,539 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-05 14:05:53,539 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:05:53,627 WARN  JpaBaseConfiguration$JpaWebConfiguration:219 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-05 14:05:54,394 INFO  DiscoveryClientOptionalArgsConfiguration:68 - [] Eureka HTTP Client uses RestTemplate.
-2022-04-05 14:05:54,500 WARN  LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:82 - [] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-04-05 14:05:54,510 INFO  InstanceInfoFactory:67 - [] Setting initial instance status as: STARTING
-2022-04-05 14:05:54,516 INFO  DiscoveryClient:372 - [] Initializing Eureka in region us-east-1
-2022-04-05 14:05:54,517 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
-2022-04-05 14:05:54,520 INFO  DiscoveryClient:1007 - [] Disable delta property : false
-2022-04-05 14:05:54,520 INFO  DiscoveryClient:1008 - [] Single vip registry refresh property : null
-2022-04-05 14:05:54,521 INFO  DiscoveryClient:1009 - [] Force full registry fetch : false
-2022-04-05 14:05:54,521 INFO  DiscoveryClient:1010 - [] Application is null : false
-2022-04-05 14:05:54,521 INFO  DiscoveryClient:1011 - [] Registered Applications size is zero : true
-2022-04-05 14:05:54,521 INFO  DiscoveryClient:1013 - [] Application version is -1: true
-2022-04-05 14:05:54,522 INFO  DiscoveryClient:1097 - [] Getting all instance registry info from the eureka server
-2022-04-05 14:05:54,549 INFO  DiscoveryClient:1106 - [] The response status is 200
-2022-04-05 14:05:54,552 INFO  DiscoveryClient:1321 - [] Starting heartbeat executor: renew interval is: 30
-2022-04-05 14:05:54,555 INFO  InstanceInfoReplicator:60 - [] InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-04-05 14:05:54,558 INFO  DiscoveryClient:492 - [] Discovery Client initialized at timestamp 1649147754558 with initial instances count: 3
-2022-04-05 14:05:54,562 INFO  EurekaServiceRegistry:41 - [] Registering application PRODUCT-SERVICE with eureka with status UP
-2022-04-05 14:05:54,562 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649147754562, current=UP, previous=STARTING]
-2022-04-05 14:05:54,563 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:05:54,578 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:05:54,597 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 7002 (http) with context path ''
-2022-04-05 14:05:54,598 INFO  EurekaAutoServiceRegistration:144 - [] Updating port to 7002
-2022-04-05 14:05:54,710 INFO  StartupInfoLogger:61 - [] Started ProductServiceApplication in 2.123 seconds (JVM running for 10.381)
-2022-04-05 14:05:54,731 INFO  EurekaServiceRegistry:62 - [] Unregistering application PRODUCT-SERVICE with eureka with status DOWN
-2022-04-05 14:05:54,732 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649147754732, current=DOWN, previous=UP]
-2022-04-05 14:05:54,732 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:05:54,737 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:05:54,738 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:05:54,740 INFO  HikariDataSource:350 - [] test - Shutdown initiated...
-2022-04-05 14:05:54,750 INFO  HikariDataSource:352 - [] test - Shutdown completed.
-2022-04-05 14:05:54,750 INFO  DiscoveryClient:935 - [] Shutting down DiscoveryClient ...
-2022-04-05 14:05:57,756 INFO  DiscoveryClient:971 - [] Unregistering ...
-2022-04-05 14:05:57,762 INFO  DiscoveryClient:973 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - deregister  status: 200
-2022-04-05 14:05:57,765 INFO  DiscoveryClient:960 - [] Completed shut down of DiscoveryClient
-2022-04-05 14:05:57,769 INFO  EurekaServiceRegistry:62 - [] Unregistering application PRODUCT-SERVICE with eureka with status DOWN
-2022-04-05 14:05:57,769 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649147757769, current=DOWN, previous=UP]
-2022-04-05 14:05:57,769 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:05:57,774 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:05:57,784 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:05:57,786 INFO  HikariDataSource:350 - [] test - Shutdown initiated...
-2022-04-05 14:05:57,789 INFO  HikariDataSource:352 - [] test - Shutdown completed.
-2022-04-05 14:05:57,790 INFO  DiscoveryClient:935 - [] Shutting down DiscoveryClient ...
-2022-04-05 14:06:00,798 INFO  DiscoveryClient:971 - [] Unregistering ...
-2022-04-05 14:06:00,801 INFO  DiscoveryClient:973 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - deregister  status: 200
-2022-04-05 14:06:00,803 INFO  DiscoveryClient:960 - [] Completed shut down of DiscoveryClient
-2022-04-05 14:13:43,248 INFO  StartupInfoLogger:55 - [] Starting ProductServiceImplTest using Java 16 on LIN24009701 with PID 11712 (started by atisharm in C:\Users\atisharm\Desktop\My GitHub Repo\CaseStudy-ShoppingCart-NewTech\Backend\Product-Service)
-2022-04-05 14:13:43,250 INFO  SpringApplication:637 - [] No active profile set, falling back to default profiles: default
-2022-04-05 14:13:44,026 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-05 14:13:44,149 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 114 ms. Found 2 JPA repository interfaces.
-2022-04-05 14:13:44,418 INFO  GenericScope:283 - [] BeanFactory id=e17bbcdc-fb9a-3a43-a7aa-81d9da0130d9
-2022-04-05 14:13:44,844 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-05 14:13:44,894 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.4.Final
-2022-04-05 14:13:45,047 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-04-05 14:13:45,177 INFO  HikariDataSource:110 - [] test - Starting...
-2022-04-05 14:13:45,456 INFO  HikariDataSource:123 - [] test - Start completed.
-2022-04-05 14:13:45,469 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-04-05 14:13:45,967 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-05 14:13:45,974 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:13:46,681 WARN  JpaBaseConfiguration$JpaWebConfiguration:219 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-05 14:13:48,509 INFO  DiscoveryClientOptionalArgsConfiguration:68 - [] Eureka HTTP Client uses RestTemplate.
-2022-04-05 14:13:48,800 WARN  LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:82 - [] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-04-05 14:13:48,826 INFO  InstanceInfoFactory:67 - [] Setting initial instance status as: STARTING
-2022-04-05 14:13:48,903 INFO  DiscoveryClient:372 - [] Initializing Eureka in region us-east-1
-2022-04-05 14:13:48,911 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
-2022-04-05 14:13:48,938 INFO  DiscoveryClient:1007 - [] Disable delta property : false
-2022-04-05 14:13:48,939 INFO  DiscoveryClient:1008 - [] Single vip registry refresh property : null
-2022-04-05 14:13:48,939 INFO  DiscoveryClient:1009 - [] Force full registry fetch : false
-2022-04-05 14:13:48,939 INFO  DiscoveryClient:1010 - [] Application is null : false
-2022-04-05 14:13:48,939 INFO  DiscoveryClient:1011 - [] Registered Applications size is zero : true
-2022-04-05 14:13:48,939 INFO  DiscoveryClient:1013 - [] Application version is -1: true
-2022-04-05 14:13:48,940 INFO  DiscoveryClient:1097 - [] Getting all instance registry info from the eureka server
-2022-04-05 14:13:49,190 INFO  DiscoveryClient:1106 - [] The response status is 200
-2022-04-05 14:13:49,193 INFO  DiscoveryClient:1321 - [] Starting heartbeat executor: renew interval is: 30
-2022-04-05 14:13:49,196 INFO  InstanceInfoReplicator:60 - [] InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-04-05 14:13:49,201 INFO  DiscoveryClient:492 - [] Discovery Client initialized at timestamp 1649148229200 with initial instances count: 3
-2022-04-05 14:13:49,208 INFO  EurekaServiceRegistry:41 - [] Registering application PRODUCT-SERVICE with eureka with status UP
-2022-04-05 14:13:49,209 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649148229209, current=UP, previous=STARTING]
-2022-04-05 14:13:49,212 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:13:49,221 INFO  StartupInfoLogger:61 - [] Started ProductServiceImplTest in 6.424 seconds (JVM running for 7.544)
-2022-04-05 14:13:49,257 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:13:49,663 INFO  StartupInfoLogger:55 - [] Starting ProductServiceApplication using Java 16 on LIN24009701 with PID 11712 (started by atisharm in C:\Users\atisharm\Desktop\My GitHub Repo\CaseStudy-ShoppingCart-NewTech\Backend\Product-Service)
-2022-04-05 14:13:49,664 INFO  SpringApplication:637 - [] No active profile set, falling back to default profiles: default
-2022-04-05 14:13:49,907 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-05 14:13:49,932 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
-2022-04-05 14:13:49,994 INFO  GenericScope:283 - [] BeanFactory id=854e8e93-77a3-3b6e-ad9e-ad551e950256
-2022-04-05 14:13:50,145 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 7002 (http)
-2022-04-05 14:13:50,156 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
-2022-04-05 14:13:50,157 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-04-05 14:13:50,388 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
-2022-04-05 14:13:50,388 INFO  ServletWebServerApplicationContext:290 - [] Root WebApplicationContext: initialization completed in 722 ms
-2022-04-05 14:13:50,457 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-05 14:13:50,463 INFO  HikariDataSource:110 - [] test - Starting...
-2022-04-05 14:13:50,485 INFO  HikariDataSource:123 - [] test - Start completed.
-2022-04-05 14:13:50,486 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-04-05 14:13:50,515 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-05 14:13:50,516 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:13:50,610 WARN  JpaBaseConfiguration$JpaWebConfiguration:219 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-05 14:13:51,358 INFO  DiscoveryClientOptionalArgsConfiguration:68 - [] Eureka HTTP Client uses RestTemplate.
-2022-04-05 14:13:51,445 WARN  LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:82 - [] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-04-05 14:13:51,452 INFO  InstanceInfoFactory:67 - [] Setting initial instance status as: STARTING
-2022-04-05 14:13:51,456 INFO  DiscoveryClient:372 - [] Initializing Eureka in region us-east-1
-2022-04-05 14:13:51,457 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
-2022-04-05 14:13:51,459 INFO  DiscoveryClient:1007 - [] Disable delta property : false
-2022-04-05 14:13:51,459 INFO  DiscoveryClient:1008 - [] Single vip registry refresh property : null
-2022-04-05 14:13:51,459 INFO  DiscoveryClient:1009 - [] Force full registry fetch : false
-2022-04-05 14:13:51,460 INFO  DiscoveryClient:1010 - [] Application is null : false
-2022-04-05 14:13:51,460 INFO  DiscoveryClient:1011 - [] Registered Applications size is zero : true
-2022-04-05 14:13:51,460 INFO  DiscoveryClient:1013 - [] Application version is -1: true
-2022-04-05 14:13:51,461 INFO  DiscoveryClient:1097 - [] Getting all instance registry info from the eureka server
-2022-04-05 14:13:51,486 INFO  DiscoveryClient:1106 - [] The response status is 200
-2022-04-05 14:13:51,487 INFO  DiscoveryClient:1321 - [] Starting heartbeat executor: renew interval is: 30
-2022-04-05 14:13:51,489 INFO  InstanceInfoReplicator:60 - [] InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-04-05 14:13:51,491 INFO  DiscoveryClient:492 - [] Discovery Client initialized at timestamp 1649148231491 with initial instances count: 3
-2022-04-05 14:13:51,493 INFO  EurekaServiceRegistry:41 - [] Registering application PRODUCT-SERVICE with eureka with status UP
-2022-04-05 14:13:51,493 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649148231493, current=UP, previous=STARTING]
-2022-04-05 14:13:51,494 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:13:51,507 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:13:51,521 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 7002 (http) with context path ''
-2022-04-05 14:13:51,522 INFO  EurekaAutoServiceRegistration:144 - [] Updating port to 7002
-2022-04-05 14:13:51,595 INFO  StartupInfoLogger:61 - [] Started ProductServiceApplication in 2.024 seconds (JVM running for 9.918)
-2022-04-05 14:13:51,606 INFO  EurekaServiceRegistry:62 - [] Unregistering application PRODUCT-SERVICE with eureka with status DOWN
-2022-04-05 14:13:51,607 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649148231607, current=DOWN, previous=UP]
-2022-04-05 14:13:51,608 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:13:51,613 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:13:51,616 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:13:51,618 INFO  HikariDataSource:350 - [] test - Shutdown initiated...
-2022-04-05 14:13:51,627 INFO  HikariDataSource:352 - [] test - Shutdown completed.
-2022-04-05 14:13:51,628 INFO  DiscoveryClient:935 - [] Shutting down DiscoveryClient ...
-2022-04-05 14:13:54,636 INFO  DiscoveryClient:971 - [] Unregistering ...
-2022-04-05 14:13:54,643 INFO  DiscoveryClient:973 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - deregister  status: 200
-2022-04-05 14:13:54,647 INFO  DiscoveryClient:960 - [] Completed shut down of DiscoveryClient
-2022-04-05 14:13:54,648 INFO  EurekaServiceRegistry:62 - [] Unregistering application PRODUCT-SERVICE with eureka with status DOWN
-2022-04-05 14:13:54,649 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649148234649, current=DOWN, previous=UP]
-2022-04-05 14:13:54,649 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:13:54,653 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:13:54,666 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:13:54,667 INFO  HikariDataSource:350 - [] test - Shutdown initiated...
-2022-04-05 14:13:54,672 INFO  HikariDataSource:352 - [] test - Shutdown completed.
-2022-04-05 14:13:54,673 INFO  DiscoveryClient:935 - [] Shutting down DiscoveryClient ...
-2022-04-05 14:13:57,676 INFO  DiscoveryClient:971 - [] Unregistering ...
-2022-04-05 14:13:57,679 INFO  DiscoveryClient:973 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - deregister  status: 200
-2022-04-05 14:13:57,681 INFO  DiscoveryClient:960 - [] Completed shut down of DiscoveryClient
-2022-04-05 14:16:51,721 INFO  StartupInfoLogger:55 - [] Starting ProductServiceImplTest using Java 16 on LIN24009701 with PID 16708 (started by atisharm in C:\Users\atisharm\Desktop\My GitHub Repo\CaseStudy-ShoppingCart-NewTech\Backend\Product-Service)
-2022-04-05 14:16:51,723 INFO  SpringApplication:637 - [] No active profile set, falling back to default profiles: default
-2022-04-05 14:16:52,490 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-05 14:16:52,620 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 122 ms. Found 2 JPA repository interfaces.
-2022-04-05 14:16:52,895 INFO  GenericScope:283 - [] BeanFactory id=e17bbcdc-fb9a-3a43-a7aa-81d9da0130d9
-2022-04-05 14:16:53,352 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-05 14:16:53,403 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.4.Final
-2022-04-05 14:16:53,554 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-04-05 14:16:53,685 INFO  HikariDataSource:110 - [] test - Starting...
-2022-04-05 14:16:53,991 INFO  HikariDataSource:123 - [] test - Start completed.
-2022-04-05 14:16:54,005 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-04-05 14:16:54,502 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-05 14:16:54,509 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:16:55,199 WARN  JpaBaseConfiguration$JpaWebConfiguration:219 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-05 14:16:57,073 INFO  DiscoveryClientOptionalArgsConfiguration:68 - [] Eureka HTTP Client uses RestTemplate.
-2022-04-05 14:16:57,332 WARN  LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:82 - [] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-04-05 14:16:57,361 INFO  InstanceInfoFactory:67 - [] Setting initial instance status as: STARTING
-2022-04-05 14:16:57,444 INFO  DiscoveryClient:372 - [] Initializing Eureka in region us-east-1
-2022-04-05 14:16:57,452 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
-2022-04-05 14:16:57,478 INFO  DiscoveryClient:1007 - [] Disable delta property : false
-2022-04-05 14:16:57,479 INFO  DiscoveryClient:1008 - [] Single vip registry refresh property : null
-2022-04-05 14:16:57,479 INFO  DiscoveryClient:1009 - [] Force full registry fetch : false
-2022-04-05 14:16:57,479 INFO  DiscoveryClient:1010 - [] Application is null : false
-2022-04-05 14:16:57,479 INFO  DiscoveryClient:1011 - [] Registered Applications size is zero : true
-2022-04-05 14:16:57,480 INFO  DiscoveryClient:1013 - [] Application version is -1: true
-2022-04-05 14:16:57,480 INFO  DiscoveryClient:1097 - [] Getting all instance registry info from the eureka server
-2022-04-05 14:16:57,755 INFO  DiscoveryClient:1106 - [] The response status is 200
-2022-04-05 14:16:57,758 INFO  DiscoveryClient:1321 - [] Starting heartbeat executor: renew interval is: 30
-2022-04-05 14:16:57,761 INFO  InstanceInfoReplicator:60 - [] InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-04-05 14:16:57,767 INFO  DiscoveryClient:492 - [] Discovery Client initialized at timestamp 1649148417766 with initial instances count: 3
-2022-04-05 14:16:57,775 INFO  EurekaServiceRegistry:41 - [] Registering application PRODUCT-SERVICE with eureka with status UP
-2022-04-05 14:16:57,776 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649148417776, current=UP, previous=STARTING]
-2022-04-05 14:16:57,780 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:16:57,794 INFO  StartupInfoLogger:61 - [] Started ProductServiceImplTest in 6.49 seconds (JVM running for 7.474)
-2022-04-05 14:16:57,822 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:16:58,090 INFO  EurekaServiceRegistry:62 - [] Unregistering application PRODUCT-SERVICE with eureka with status DOWN
-2022-04-05 14:16:58,091 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649148418091, current=DOWN, previous=UP]
-2022-04-05 14:16:58,091 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:16:58,095 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:16:58,096 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:16:58,099 INFO  HikariDataSource:350 - [] test - Shutdown initiated...
-2022-04-05 14:16:58,105 INFO  HikariDataSource:352 - [] test - Shutdown completed.
-2022-04-05 14:16:58,106 INFO  DiscoveryClient:935 - [] Shutting down DiscoveryClient ...
-2022-04-05 14:17:01,110 INFO  DiscoveryClient:971 - [] Unregistering ...
-2022-04-05 14:17:01,116 INFO  DiscoveryClient:973 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - deregister  status: 200
-2022-04-05 14:17:01,119 INFO  DiscoveryClient:960 - [] Completed shut down of DiscoveryClient
-2022-04-05 14:34:37,735 INFO  StartupInfoLogger:55 - [] Starting ProductServiceApplicationTests using Java 16 on LIN24009701 with PID 25340 (started by atisharm in C:\Users\atisharm\Desktop\My GitHub Repo\CaseStudy-ShoppingCart-NewTech\Backend\Product-Service)
-2022-04-05 14:34:37,736 INFO  SpringApplication:637 - [] No active profile set, falling back to default profiles: default
-2022-04-05 14:34:38,543 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-05 14:34:38,691 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 140 ms. Found 2 JPA repository interfaces.
-2022-04-05 14:34:39,061 INFO  GenericScope:283 - [] BeanFactory id=1dad1167-47f3-3351-9650-d52561791e3e
-2022-04-05 14:34:39,571 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-05 14:34:39,637 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.4.Final
-2022-04-05 14:34:39,811 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-04-05 14:34:39,947 INFO  HikariDataSource:110 - [] test - Starting...
-2022-04-05 14:34:40,222 INFO  HikariDataSource:123 - [] test - Start completed.
-2022-04-05 14:34:40,238 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-04-05 14:34:40,785 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-05 14:34:40,792 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:34:41,529 WARN  JpaBaseConfiguration$JpaWebConfiguration:219 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-05 14:34:43,600 INFO  DiscoveryClientOptionalArgsConfiguration:68 - [] Eureka HTTP Client uses RestTemplate.
-2022-04-05 14:34:43,852 WARN  LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:82 - [] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-04-05 14:34:43,881 INFO  InstanceInfoFactory:67 - [] Setting initial instance status as: STARTING
-2022-04-05 14:34:43,973 INFO  DiscoveryClient:372 - [] Initializing Eureka in region us-east-1
-2022-04-05 14:34:43,980 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
-2022-04-05 14:34:44,009 INFO  DiscoveryClient:1007 - [] Disable delta property : false
-2022-04-05 14:34:44,010 INFO  DiscoveryClient:1008 - [] Single vip registry refresh property : null
-2022-04-05 14:34:44,010 INFO  DiscoveryClient:1009 - [] Force full registry fetch : false
-2022-04-05 14:34:44,010 INFO  DiscoveryClient:1010 - [] Application is null : false
-2022-04-05 14:34:44,011 INFO  DiscoveryClient:1011 - [] Registered Applications size is zero : true
-2022-04-05 14:34:44,011 INFO  DiscoveryClient:1013 - [] Application version is -1: true
-2022-04-05 14:34:44,011 INFO  DiscoveryClient:1097 - [] Getting all instance registry info from the eureka server
-2022-04-05 14:34:44,282 INFO  DiscoveryClient:1106 - [] The response status is 200
-2022-04-05 14:34:44,285 INFO  DiscoveryClient:1321 - [] Starting heartbeat executor: renew interval is: 30
-2022-04-05 14:34:44,287 INFO  InstanceInfoReplicator:60 - [] InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-04-05 14:34:44,293 INFO  DiscoveryClient:492 - [] Discovery Client initialized at timestamp 1649149484292 with initial instances count: 3
-2022-04-05 14:34:44,298 INFO  EurekaServiceRegistry:41 - [] Registering application PRODUCT-SERVICE with eureka with status UP
-2022-04-05 14:34:44,299 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649149484299, current=UP, previous=STARTING]
-2022-04-05 14:34:44,303 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:34:44,314 INFO  StartupInfoLogger:61 - [] Started ProductServiceApplicationTests in 7.026 seconds (JVM running for 8.212)
-2022-04-05 14:34:44,345 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:34:44,496 INFO  AbstractTestContextBootstrapper:305 - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.product.service.category.CategoryServiceImplTest], using SpringBootContextLoader
-2022-04-05 14:34:44,497 INFO  AbstractContextLoader:264 - [] Could not detect default resource locations for test class [com.product.service.category.CategoryServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-04-05 14:34:44,497 INFO  AnnotationConfigContextLoaderUtils:83 - [] Could not detect default configuration classes for test class [com.product.service.category.CategoryServiceImplTest]: CategoryServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-04-05 14:34:44,504 INFO  SpringBootTestContextBootstrapper:238 - [] Found @SpringBootConfiguration com.product.ProductServiceApplication for test class com.product.service.category.CategoryServiceImplTest
-2022-04-05 14:34:44,506 INFO  AbstractTestContextBootstrapper:245 - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-04-05 14:34:44,507 INFO  AbstractTestContextBootstrapper:174 - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@15c042fc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2045108, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7dee7914, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6559cbdd, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7219a228, org.springframework.test.context.support.DirtiesContextTestExecutionListener@52b53172, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5c1dc4e9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7731fb94, org.springframework.test.context.event.EventPublishingTestExecutionListener@48860fb8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3343997b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@14b3976, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@79de9f90, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@15db4dc, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2e7a6dcd, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@762261fd]
-2022-04-05 14:34:44,668 INFO  AbstractTestContextBootstrapper:305 - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.product.service.ProductServiceImplTest], using SpringBootContextLoader
-2022-04-05 14:34:44,669 INFO  AbstractContextLoader:264 - [] Could not detect default resource locations for test class [com.product.service.ProductServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-04-05 14:34:44,672 INFO  AbstractTestContextBootstrapper:245 - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-04-05 14:34:44,673 INFO  AbstractTestContextBootstrapper:174 - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@f4a21cb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@635f4be1, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@456d3914, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@26a0068a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@783a2fec, org.springframework.test.context.support.DirtiesContextTestExecutionListener@61236349, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4daa53e0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6b989889, org.springframework.test.context.event.EventPublishingTestExecutionListener@42748f59, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@38379575, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@271df4c0, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@86e7c7a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6e863469, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6a9e88f1, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@22edca96]
-2022-04-05 14:34:44,874 INFO  StartupInfoLogger:55 - [] Starting ProductServiceApplication using Java 16 on LIN24009701 with PID 25340 (started by atisharm in C:\Users\atisharm\Desktop\My GitHub Repo\CaseStudy-ShoppingCart-NewTech\Backend\Product-Service)
-2022-04-05 14:34:44,875 INFO  SpringApplication:637 - [] No active profile set, falling back to default profiles: default
-2022-04-05 14:34:45,126 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-05 14:34:45,146 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
-2022-04-05 14:34:45,204 INFO  GenericScope:283 - [] BeanFactory id=d3e106b0-ae67-3ccd-b22a-599cd7ef2411
-2022-04-05 14:34:45,381 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 7002 (http)
-2022-04-05 14:34:45,393 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
-2022-04-05 14:34:45,394 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-04-05 14:34:45,547 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
-2022-04-05 14:34:45,548 INFO  ServletWebServerApplicationContext:290 - [] Root WebApplicationContext: initialization completed in 670 ms
-2022-04-05 14:34:45,624 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-05 14:34:45,633 INFO  HikariDataSource:110 - [] test - Starting...
-2022-04-05 14:34:45,658 INFO  HikariDataSource:123 - [] test - Start completed.
-2022-04-05 14:34:45,659 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-04-05 14:34:45,700 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-05 14:34:45,701 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:34:45,791 WARN  JpaBaseConfiguration$JpaWebConfiguration:219 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-05 14:34:46,581 INFO  DiscoveryClientOptionalArgsConfiguration:68 - [] Eureka HTTP Client uses RestTemplate.
-2022-04-05 14:34:46,673 WARN  LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:82 - [] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-04-05 14:34:46,682 INFO  InstanceInfoFactory:67 - [] Setting initial instance status as: STARTING
-2022-04-05 14:34:46,686 INFO  DiscoveryClient:372 - [] Initializing Eureka in region us-east-1
-2022-04-05 14:34:46,687 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
-2022-04-05 14:34:46,689 INFO  DiscoveryClient:1007 - [] Disable delta property : false
-2022-04-05 14:34:46,689 INFO  DiscoveryClient:1008 - [] Single vip registry refresh property : null
-2022-04-05 14:34:46,690 INFO  DiscoveryClient:1009 - [] Force full registry fetch : false
-2022-04-05 14:34:46,690 INFO  DiscoveryClient:1010 - [] Application is null : false
-2022-04-05 14:34:46,690 INFO  DiscoveryClient:1011 - [] Registered Applications size is zero : true
-2022-04-05 14:34:46,690 INFO  DiscoveryClient:1013 - [] Application version is -1: true
-2022-04-05 14:34:46,690 INFO  DiscoveryClient:1097 - [] Getting all instance registry info from the eureka server
-2022-04-05 14:34:46,711 INFO  DiscoveryClient:1106 - [] The response status is 200
-2022-04-05 14:34:46,712 INFO  DiscoveryClient:1321 - [] Starting heartbeat executor: renew interval is: 30
-2022-04-05 14:34:46,714 INFO  InstanceInfoReplicator:60 - [] InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-04-05 14:34:46,715 INFO  DiscoveryClient:492 - [] Discovery Client initialized at timestamp 1649149486715 with initial instances count: 3
-2022-04-05 14:34:46,717 INFO  EurekaServiceRegistry:41 - [] Registering application PRODUCT-SERVICE with eureka with status UP
-2022-04-05 14:34:46,718 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649149486718, current=UP, previous=STARTING]
-2022-04-05 14:34:46,718 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:34:46,735 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:34:46,753 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 7002 (http) with context path ''
-2022-04-05 14:34:46,755 INFO  EurekaAutoServiceRegistration:144 - [] Updating port to 7002
-2022-04-05 14:34:46,838 INFO  StartupInfoLogger:61 - [] Started ProductServiceApplication in 2.063 seconds (JVM running for 10.736)
-2022-04-05 14:34:46,852 INFO  AbstractTestContextBootstrapper:305 - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.product.resource.CategoryResourceTest], using SpringBootContextLoader
-2022-04-05 14:34:46,853 INFO  AbstractContextLoader:264 - [] Could not detect default resource locations for test class [com.product.resource.CategoryResourceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-04-05 14:34:46,854 INFO  AnnotationConfigContextLoaderUtils:83 - [] Could not detect default configuration classes for test class [com.product.resource.CategoryResourceTest]: CategoryResourceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-04-05 14:34:46,862 INFO  SpringBootTestContextBootstrapper:238 - [] Found @SpringBootConfiguration com.product.ProductServiceApplication for test class com.product.resource.CategoryResourceTest
-2022-04-05 14:34:46,864 INFO  AbstractTestContextBootstrapper:245 - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-04-05 14:34:46,864 INFO  AbstractTestContextBootstrapper:174 - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24a29d8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@55af9b48, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@890196b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@12e1413c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@41b6ae51, org.springframework.test.context.support.DirtiesContextTestExecutionListener@686a08f4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@60b90fd3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@78494a59, org.springframework.test.context.event.EventPublishingTestExecutionListener@c79a727, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@34ec33f4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1c83652d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2eaaef66, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6fab250b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3a8dd899, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3da068e8]
-2022-04-05 14:34:46,917 INFO  AbstractTestContextBootstrapper:305 - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.product.resource.ProductResourceTest], using SpringBootContextLoader
-2022-04-05 14:34:46,919 INFO  AbstractContextLoader:264 - [] Could not detect default resource locations for test class [com.product.resource.ProductResourceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2022-04-05 14:34:46,920 INFO  AnnotationConfigContextLoaderUtils:83 - [] Could not detect default configuration classes for test class [com.product.resource.ProductResourceTest]: ProductResourceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2022-04-05 14:34:46,922 INFO  SpringBootTestContextBootstrapper:238 - [] Found @SpringBootConfiguration com.product.ProductServiceApplication for test class com.product.resource.ProductResourceTest
-2022-04-05 14:34:46,924 INFO  AbstractTestContextBootstrapper:245 - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2022-04-05 14:34:46,925 INFO  AbstractTestContextBootstrapper:174 - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31e90355, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@42e74fa3, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4d5196fd, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@b680059, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@72e259ca, org.springframework.test.context.support.DirtiesContextTestExecutionListener@a809a62, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4b2713b1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6a844, org.springframework.test.context.event.EventPublishingTestExecutionListener@604a9d87, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6e975866, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1dde749e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@282fabe9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1c3dadce, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@48bd8247, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@26a9754a]
-2022-04-05 14:34:47,066 INFO  ProductResource:49 - [] http://localhost/image/Image.jpeg
-2022-04-05 14:34:47,091 INFO  EurekaServiceRegistry:62 - [] Unregistering application PRODUCT-SERVICE with eureka with status DOWN
-2022-04-05 14:34:47,091 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649149487091, current=DOWN, previous=UP]
-2022-04-05 14:34:47,091 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:34:47,096 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:34:47,097 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:34:47,099 INFO  HikariDataSource:350 - [] test - Shutdown initiated...
-2022-04-05 14:34:47,105 INFO  HikariDataSource:352 - [] test - Shutdown completed.
-2022-04-05 14:34:47,106 INFO  DiscoveryClient:935 - [] Shutting down DiscoveryClient ...
-2022-04-05 14:34:50,119 INFO  DiscoveryClient:971 - [] Unregistering ...
-2022-04-05 14:34:50,124 INFO  DiscoveryClient:973 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - deregister  status: 200
-2022-04-05 14:34:50,127 INFO  DiscoveryClient:960 - [] Completed shut down of DiscoveryClient
-2022-04-05 14:34:50,130 INFO  EurekaServiceRegistry:62 - [] Unregistering application PRODUCT-SERVICE with eureka with status DOWN
-2022-04-05 14:34:50,130 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649149490130, current=DOWN, previous=UP]
-2022-04-05 14:34:50,131 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:34:50,135 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:34:50,145 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:34:50,146 INFO  HikariDataSource:350 - [] test - Shutdown initiated...
-2022-04-05 14:34:50,150 INFO  HikariDataSource:352 - [] test - Shutdown completed.
-2022-04-05 14:34:50,150 INFO  DiscoveryClient:935 - [] Shutting down DiscoveryClient ...
-2022-04-05 14:34:53,161 INFO  DiscoveryClient:971 - [] Unregistering ...
-2022-04-05 14:34:53,166 INFO  DiscoveryClient:973 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - deregister  status: 200
-2022-04-05 14:34:53,168 INFO  DiscoveryClient:960 - [] Completed shut down of DiscoveryClient
-2022-04-05 14:36:01,382 INFO  StartupInfoLogger:55 - [] Starting ProductResourceTest using Java 16 on LIN24009701 with PID 4564 (started by atisharm in C:\Users\atisharm\Desktop\My GitHub Repo\CaseStudy-ShoppingCart-NewTech\Backend\Product-Service)
-2022-04-05 14:36:01,384 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.6.3, Spring v5.3.15
-2022-04-05 14:36:01,385 INFO  SpringApplication:637 - [] No active profile set, falling back to default profiles: default
-2022-04-05 14:36:02,186 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-05 14:36:02,340 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 145 ms. Found 2 JPA repository interfaces.
-2022-04-05 14:36:02,607 INFO  GenericScope:283 - [] BeanFactory id=1dad1167-47f3-3351-9650-d52561791e3e
-2022-04-05 14:36:03,057 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-05 14:36:03,097 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.4.Final
-2022-04-05 14:36:03,227 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-04-05 14:36:03,349 INFO  HikariDataSource:110 - [] test - Starting...
-2022-04-05 14:36:03,608 INFO  HikariDataSource:123 - [] test - Start completed.
-2022-04-05 14:36:03,623 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-04-05 14:36:04,164 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-05 14:36:04,170 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:36:04,939 WARN  JpaBaseConfiguration$JpaWebConfiguration:219 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-05 14:36:07,008 INFO  DiscoveryClientOptionalArgsConfiguration:68 - [] Eureka HTTP Client uses RestTemplate.
-2022-04-05 14:36:07,274 WARN  LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:82 - [] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-04-05 14:36:07,308 INFO  InstanceInfoFactory:67 - [] Setting initial instance status as: STARTING
-2022-04-05 14:36:07,391 INFO  DiscoveryClient:372 - [] Initializing Eureka in region us-east-1
-2022-04-05 14:36:07,397 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
-2022-04-05 14:36:07,423 INFO  DiscoveryClient:1007 - [] Disable delta property : false
-2022-04-05 14:36:07,424 INFO  DiscoveryClient:1008 - [] Single vip registry refresh property : null
-2022-04-05 14:36:07,424 INFO  DiscoveryClient:1009 - [] Force full registry fetch : false
-2022-04-05 14:36:07,424 INFO  DiscoveryClient:1010 - [] Application is null : false
-2022-04-05 14:36:07,424 INFO  DiscoveryClient:1011 - [] Registered Applications size is zero : true
-2022-04-05 14:36:07,424 INFO  DiscoveryClient:1013 - [] Application version is -1: true
-2022-04-05 14:36:07,425 INFO  DiscoveryClient:1097 - [] Getting all instance registry info from the eureka server
-2022-04-05 14:36:07,737 INFO  DiscoveryClient:1106 - [] The response status is 200
-2022-04-05 14:36:07,741 INFO  DiscoveryClient:1321 - [] Starting heartbeat executor: renew interval is: 30
-2022-04-05 14:36:07,746 INFO  InstanceInfoReplicator:60 - [] InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-04-05 14:36:07,755 INFO  DiscoveryClient:492 - [] Discovery Client initialized at timestamp 1649149567754 with initial instances count: 3
-2022-04-05 14:36:07,761 INFO  EurekaServiceRegistry:41 - [] Registering application PRODUCT-SERVICE with eureka with status UP
-2022-04-05 14:36:07,763 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649149567763, current=UP, previous=STARTING]
-2022-04-05 14:36:07,765 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:36:07,778 INFO  StartupInfoLogger:61 - [] Started ProductResourceTest in 6.824 seconds (JVM running for 8.003)
-2022-04-05 14:36:07,808 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:36:08,186 INFO  EurekaServiceRegistry:62 - [] Unregistering application PRODUCT-SERVICE with eureka with status DOWN
-2022-04-05 14:36:08,187 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649149568187, current=DOWN, previous=UP]
-2022-04-05 14:36:08,187 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
-2022-04-05 14:36:08,191 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
-2022-04-05 14:36:08,194 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-05 14:36:08,196 INFO  HikariDataSource:350 - [] test - Shutdown initiated...
-2022-04-05 14:36:08,203 INFO  HikariDataSource:352 - [] test - Shutdown completed.
-2022-04-05 14:36:08,204 INFO  DiscoveryClient:935 - [] Shutting down DiscoveryClient ...
-2022-04-05 14:36:11,220 INFO  DiscoveryClient:971 - [] Unregistering ...
-2022-04-05 14:36:11,226 INFO  DiscoveryClient:973 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - deregister  status: 200
-2022-04-05 14:36:11,231 INFO  DiscoveryClient:960 - [] Completed shut down of DiscoveryClient
+2022-04-11 08:41:43,165 INFO  StartupInfoLogger:55 - [] Starting ProductServiceApplicationTests using Java 16 on LIN24009701 with PID 30972 (started by atisharm in C:\Users\atisharm\Desktop\My GitHub Repo\CaseStudy-ShoppingCart-NewTech\Backend\Product-Service)
+2022-04-11 08:41:43,175 INFO  SpringApplication:637 - [] No active profile set, falling back to default profiles: default
+2022-04-11 08:41:44,926 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-11 08:41:45,250 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 307 ms. Found 2 JPA repository interfaces.
+2022-04-11 08:41:45,820 INFO  GenericScope:283 - [] BeanFactory id=8bfeb57a-3ca6-3284-bad9-22667a5e63dd
+2022-04-11 08:41:46,621 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-11 08:41:46,721 INFO  Version:44 - [] HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-04-11 08:41:47,058 INFO  JavaReflectionManager:56 - [] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-11 08:41:47,370 INFO  HikariDataSource:110 - [] test - Starting...
+2022-04-11 08:41:47,924 INFO  HikariDataSource:123 - [] test - Start completed.
+2022-04-11 08:41:47,959 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-11 08:41:49,284 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-11 08:41:49,297 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-11 08:41:50,410 WARN  JpaBaseConfiguration$JpaWebConfiguration:219 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-11 08:41:53,065 INFO  DiscoveryClientOptionalArgsConfiguration:68 - [] Eureka HTTP Client uses RestTemplate.
+2022-04-11 08:41:53,374 WARN  LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:82 - [] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-04-11 08:41:53,417 INFO  InstanceInfoFactory:67 - [] Setting initial instance status as: STARTING
+2022-04-11 08:41:53,550 INFO  DiscoveryClient:372 - [] Initializing Eureka in region us-east-1
+2022-04-11 08:41:53,560 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
+2022-04-11 08:41:53,609 INFO  DiscoveryClient:1007 - [] Disable delta property : false
+2022-04-11 08:41:53,610 INFO  DiscoveryClient:1008 - [] Single vip registry refresh property : null
+2022-04-11 08:41:53,611 INFO  DiscoveryClient:1009 - [] Force full registry fetch : false
+2022-04-11 08:41:53,611 INFO  DiscoveryClient:1010 - [] Application is null : false
+2022-04-11 08:41:53,612 INFO  DiscoveryClient:1011 - [] Registered Applications size is zero : true
+2022-04-11 08:41:53,612 INFO  DiscoveryClient:1013 - [] Application version is -1: true
+2022-04-11 08:41:53,612 INFO  DiscoveryClient:1097 - [] Getting all instance registry info from the eureka server
+2022-04-11 08:41:54,081 INFO  DiscoveryClient:1106 - [] The response status is 200
+2022-04-11 08:41:54,085 INFO  DiscoveryClient:1321 - [] Starting heartbeat executor: renew interval is: 30
+2022-04-11 08:41:54,089 INFO  InstanceInfoReplicator:60 - [] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-04-11 08:41:54,096 INFO  DiscoveryClient:492 - [] Discovery Client initialized at timestamp 1649646714095 with initial instances count: 6
+2022-04-11 08:41:54,101 INFO  EurekaServiceRegistry:41 - [] Registering application PRODUCT-SERVICE with eureka with status UP
+2022-04-11 08:41:54,103 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649646714103, current=UP, previous=STARTING]
+2022-04-11 08:41:54,105 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
+2022-04-11 08:41:54,117 INFO  StartupInfoLogger:61 - [] Started ProductServiceApplicationTests in 11.776 seconds (JVM running for 14.208)
+2022-04-11 08:41:54,170 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
+2022-04-11 08:41:54,348 INFO  AbstractTestContextBootstrapper:305 - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.product.resource.CategoryResourceTest], using SpringBootContextLoader
+2022-04-11 08:41:54,349 INFO  AbstractContextLoader:264 - [] Could not detect default resource locations for test class [com.product.resource.CategoryResourceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-04-11 08:41:54,350 INFO  AnnotationConfigContextLoaderUtils:83 - [] Could not detect default configuration classes for test class [com.product.resource.CategoryResourceTest]: CategoryResourceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-04-11 08:41:54,360 INFO  SpringBootTestContextBootstrapper:238 - [] Found @SpringBootConfiguration com.product.ProductServiceApplication for test class com.product.resource.CategoryResourceTest
+2022-04-11 08:41:54,363 INFO  AbstractTestContextBootstrapper:245 - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-04-11 08:41:54,364 INFO  AbstractTestContextBootstrapper:174 - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4efa76b2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5761748e, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@58f72035, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1b67989d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6b532a5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5aace3f9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3bbb9611, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1c3f528b, org.springframework.test.context.event.EventPublishingTestExecutionListener@33307bb3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@ebef507, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@69d2f1df, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@f1f4d64, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3fc252d7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@46ad9ee5, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@388fd3e6]
+2022-04-11 08:41:54,505 INFO  AbstractTestContextBootstrapper:305 - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.product.resource.ProductResourceTest], using SpringBootContextLoader
+2022-04-11 08:41:54,506 INFO  AbstractContextLoader:264 - [] Could not detect default resource locations for test class [com.product.resource.ProductResourceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-04-11 08:41:54,507 INFO  AnnotationConfigContextLoaderUtils:83 - [] Could not detect default configuration classes for test class [com.product.resource.ProductResourceTest]: ProductResourceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-04-11 08:41:54,508 INFO  SpringBootTestContextBootstrapper:238 - [] Found @SpringBootConfiguration com.product.ProductServiceApplication for test class com.product.resource.ProductResourceTest
+2022-04-11 08:41:54,510 INFO  AbstractTestContextBootstrapper:245 - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-04-11 08:41:54,511 INFO  AbstractTestContextBootstrapper:174 - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5d24b9fd, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1958d75f, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@623f32c0, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@38a4e455, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@40b759ed, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1f8a8c8b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4381488, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1ba1de16, org.springframework.test.context.event.EventPublishingTestExecutionListener@61a394be, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2a06a2d5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6e5e6f49, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7b1a4dfa, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6613043, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@196e3a50, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4572a13]
+2022-04-11 08:41:54,731 INFO  ProductResource:49 - [] http://localhost/image/Image.jpeg
+2022-04-11 08:41:54,745 INFO  AbstractTestContextBootstrapper:305 - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.product.service.category.CategoryServiceImplTest], using SpringBootContextLoader
+2022-04-11 08:41:54,747 INFO  AbstractContextLoader:264 - [] Could not detect default resource locations for test class [com.product.service.category.CategoryServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-04-11 08:41:54,747 INFO  AnnotationConfigContextLoaderUtils:83 - [] Could not detect default configuration classes for test class [com.product.service.category.CategoryServiceImplTest]: CategoryServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-04-11 08:41:54,757 INFO  SpringBootTestContextBootstrapper:238 - [] Found @SpringBootConfiguration com.product.ProductServiceApplication for test class com.product.service.category.CategoryServiceImplTest
+2022-04-11 08:41:54,759 INFO  AbstractTestContextBootstrapper:245 - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-04-11 08:41:54,760 INFO  AbstractTestContextBootstrapper:174 - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@61ac42c6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@108533ae, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@405e5d1d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@11728b78, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@12cb41e2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2b6a1856, org.springframework.test.context.transaction.TransactionalTestExecutionListener@19ee0e93, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1c427f9d, org.springframework.test.context.event.EventPublishingTestExecutionListener@54cee9a6, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2f9de3c1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@46eefa37, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@495fdbe0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6aff88b4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2a3cedc1, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1b3295f3]
+2022-04-11 08:41:54,831 INFO  AbstractTestContextBootstrapper:305 - [] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.product.service.ProductServiceImplTest], using SpringBootContextLoader
+2022-04-11 08:41:54,832 INFO  AbstractContextLoader:264 - [] Could not detect default resource locations for test class [com.product.service.ProductServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-04-11 08:41:54,837 INFO  AbstractTestContextBootstrapper:245 - [] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-04-11 08:41:54,838 INFO  AbstractTestContextBootstrapper:174 - [] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6052a656, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2812849a, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7cbd373e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@78346c38, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@d21057e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@31ab7614, org.springframework.test.context.transaction.TransactionalTestExecutionListener@24bab3d8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7fb44edb, org.springframework.test.context.event.EventPublishingTestExecutionListener@7a3bbea6, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@104a6c23, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@619f2981, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3c8071ff, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1b692647, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@58816a7d, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@40ca93cd]
+2022-04-11 08:41:55,163 INFO  StartupInfoLogger:55 - [] Starting ProductServiceApplication using Java 16 on LIN24009701 with PID 30972 (started by atisharm in C:\Users\atisharm\Desktop\My GitHub Repo\CaseStudy-ShoppingCart-NewTech\Backend\Product-Service)
+2022-04-11 08:41:55,164 INFO  SpringApplication:637 - [] No active profile set, falling back to default profiles: default
+2022-04-11 08:41:55,542 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-11 08:41:55,568 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2022-04-11 08:41:55,639 INFO  GenericScope:283 - [] BeanFactory id=cd41cae2-8978-3bc5-b049-cfa1cc037910
+2022-04-11 08:41:55,880 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 7002 (http)
+2022-04-11 08:41:55,899 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2022-04-11 08:41:55,900 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-04-11 08:41:56,116 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2022-04-11 08:41:56,117 INFO  ServletWebServerApplicationContext:290 - [] Root WebApplicationContext: initialization completed in 946 ms
+2022-04-11 08:41:56,245 INFO  LogHelper:31 - [] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-11 08:41:56,254 INFO  HikariDataSource:110 - [] test - Starting...
+2022-04-11 08:41:56,282 INFO  HikariDataSource:123 - [] test - Start completed.
+2022-04-11 08:41:56,283 INFO  Dialect:175 - [] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-11 08:41:56,346 INFO  JtaPlatformInitiator:52 - [] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-11 08:41:56,347 INFO  AbstractEntityManagerFactoryBean:437 - [] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-11 08:41:56,506 WARN  JpaBaseConfiguration$JpaWebConfiguration:219 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-11 08:41:57,767 INFO  DiscoveryClientOptionalArgsConfiguration:68 - [] Eureka HTTP Client uses RestTemplate.
+2022-04-11 08:41:57,875 WARN  LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:82 - [] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-04-11 08:41:57,884 INFO  InstanceInfoFactory:67 - [] Setting initial instance status as: STARTING
+2022-04-11 08:41:57,888 INFO  DiscoveryClient:372 - [] Initializing Eureka in region us-east-1
+2022-04-11 08:41:57,888 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
+2022-04-11 08:41:57,891 INFO  DiscoveryClient:1007 - [] Disable delta property : false
+2022-04-11 08:41:57,891 INFO  DiscoveryClient:1008 - [] Single vip registry refresh property : null
+2022-04-11 08:41:57,892 INFO  DiscoveryClient:1009 - [] Force full registry fetch : false
+2022-04-11 08:41:57,892 INFO  DiscoveryClient:1010 - [] Application is null : false
+2022-04-11 08:41:57,892 INFO  DiscoveryClient:1011 - [] Registered Applications size is zero : true
+2022-04-11 08:41:57,892 INFO  DiscoveryClient:1013 - [] Application version is -1: true
+2022-04-11 08:41:57,893 INFO  DiscoveryClient:1097 - [] Getting all instance registry info from the eureka server
+2022-04-11 08:41:57,927 INFO  DiscoveryClient:1106 - [] The response status is 200
+2022-04-11 08:41:57,930 INFO  DiscoveryClient:1321 - [] Starting heartbeat executor: renew interval is: 30
+2022-04-11 08:41:57,932 INFO  InstanceInfoReplicator:60 - [] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-04-11 08:41:57,936 INFO  DiscoveryClient:492 - [] Discovery Client initialized at timestamp 1649646717936 with initial instances count: 6
+2022-04-11 08:41:57,938 INFO  EurekaServiceRegistry:41 - [] Registering application PRODUCT-SERVICE with eureka with status UP
+2022-04-11 08:41:57,939 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649646717939, current=UP, previous=STARTING]
+2022-04-11 08:41:57,939 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
+2022-04-11 08:41:57,959 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
+2022-04-11 08:41:57,977 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 7002 (http) with context path ''
+2022-04-11 08:41:57,978 INFO  EurekaAutoServiceRegistration:144 - [] Updating port to 7002
+2022-04-11 08:41:58,095 INFO  StartupInfoLogger:61 - [] Started ProductServiceApplication in 3.159 seconds (JVM running for 18.186)
+2022-04-11 08:41:58,122 INFO  EurekaServiceRegistry:62 - [] Unregistering application PRODUCT-SERVICE with eureka with status DOWN
+2022-04-11 08:41:58,122 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649646718122, current=DOWN, previous=UP]
+2022-04-11 08:41:58,123 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
+2022-04-11 08:41:58,130 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-11 08:41:58,132 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
+2022-04-11 08:41:58,134 INFO  HikariDataSource:350 - [] test - Shutdown initiated...
+2022-04-11 08:41:58,146 INFO  HikariDataSource:352 - [] test - Shutdown completed.
+2022-04-11 08:41:58,147 INFO  DiscoveryClient:935 - [] Shutting down DiscoveryClient ...
+2022-04-11 08:42:01,161 INFO  DiscoveryClient:971 - [] Unregistering ...
+2022-04-11 08:42:01,168 INFO  DiscoveryClient:973 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - deregister  status: 200
+2022-04-11 08:42:01,171 INFO  DiscoveryClient:960 - [] Completed shut down of DiscoveryClient
+2022-04-11 08:42:01,174 INFO  EurekaServiceRegistry:62 - [] Unregistering application PRODUCT-SERVICE with eureka with status DOWN
+2022-04-11 08:42:01,174 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1649646721174, current=DOWN, previous=UP]
+2022-04-11 08:42:01,175 INFO  DiscoveryClient:873 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002: registering service...
+2022-04-11 08:42:01,180 INFO  DiscoveryClient:882 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - registration status: 204
+2022-04-11 08:42:01,192 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-11 08:42:01,193 INFO  HikariDataSource:350 - [] test - Shutdown initiated...
+2022-04-11 08:42:01,197 INFO  HikariDataSource:352 - [] test - Shutdown completed.
+2022-04-11 08:42:01,198 INFO  DiscoveryClient:935 - [] Shutting down DiscoveryClient ...
+2022-04-11 08:42:04,203 INFO  DiscoveryClient:971 - [] Unregistering ...
+2022-04-11 08:42:04,208 INFO  DiscoveryClient:973 - [] DiscoveryClient_PRODUCT-SERVICE/LIN24009701.corp.capgemini.com:product-service:7002 - deregister  status: 200
+2022-04-11 08:42:04,211 INFO  DiscoveryClient:960 - [] Completed shut down of DiscoveryClient

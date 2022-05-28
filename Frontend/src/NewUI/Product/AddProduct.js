@@ -5,7 +5,7 @@ import axios from "axios";
 import FormCard from "./../core/FormCard";
 import Base from "./../core/Base";
 import api from "./../api/webapi";
-import { getAllCategories } from './helper/updateHelper';
+import { getAllCategories, addProduct } from "./helper/updateHelper";
 
 function AddProduct() {
   useEffect(() => {
@@ -28,6 +28,15 @@ function AddProduct() {
     setCategories(res.data);
   };
 
+  // const postDataToServer = async (data) => {
+  //   let res;
+  //   try {
+  //     res = await addProduct(data);
+  //     console.log(res);
+  //   } catch (e) {
+  //     console.log(e.response.data);
+  //   }
+  // };
 
   useEffect(() => {
     getCategories();
@@ -38,7 +47,7 @@ function AddProduct() {
     e.preventDefault();
   };
 
-  //creating fucntion to post data on sever
+// creating fucntion to post data on sever
   const postDataToServer = (data) => {
     axios.post(`${api}/product/addProduct`, data).then(
       (response) => {
@@ -73,7 +82,6 @@ function AddProduct() {
       }
     );
   };
-
 
   return (
     <Base title="" description="">

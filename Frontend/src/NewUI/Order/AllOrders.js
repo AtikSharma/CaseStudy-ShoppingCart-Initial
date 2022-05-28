@@ -118,7 +118,7 @@ const AllOrders = () => {
                     <DropdownButton
                       id="dropdown-basic-button"
                       title="Select Payment Method"
-                      className="m-2"
+                      className="m-2 "
                     >
                       <Dropdown.Item
                         onClick={() => {
@@ -133,7 +133,7 @@ const AllOrders = () => {
                         <Link
                           className="dropdown-item"
                           to="/checkout"
-                          tag="a"
+                          
                           onClick={() => initiatePayment(order)}
                           action
                         >

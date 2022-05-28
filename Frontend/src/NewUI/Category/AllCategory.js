@@ -28,7 +28,7 @@ function AllCategory() {
   };
 
   return (
-    <Base title="Manage Category" description="">
+    <Base title="Manage Categories" description="">
       <div class="col">
         <ul class="list-group ">
           {Categories.length > 0

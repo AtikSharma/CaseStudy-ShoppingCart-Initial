@@ -26,7 +26,7 @@ public class ProfileServiceImpl implements ProfileService {
     @Autowired
     RestTemplate restTemplate;
     @Autowired
-    private KafkaTemplate<String, String> kafkaTemplate;
+    private KafkaTemplate<String, String> kafkaTemplate ;
 
     @Override
     public UserProfile addNewCustomerProfile(UserProfile user) {

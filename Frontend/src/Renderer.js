@@ -30,6 +30,7 @@ import Success from "./NewUI/Payment/Success";
 import Failure from "./NewUI/Payment/Failure";
 import Checkout from "./NewUI/Payment/Checkout";
 import CustomerTransaction from './NewUI/Transactions/CustomerTransaction';
+import TestComponent from './TestComponent';
 
 const Renderer = () => {
   return (
@@ -43,6 +44,7 @@ const Renderer = () => {
         <Route path="/login" element={<Login />} exact />
         <Route path="/register" element={<Register />} exact />
         <Route path="/profile" element={<Dashboard />} exact />
+        <Route path="/test" element={<TestComponent />} exact />
 
         {/* Customer Routes */}
         <Route element={<ProtectedRoute allowedRole={"Customer"} />}>

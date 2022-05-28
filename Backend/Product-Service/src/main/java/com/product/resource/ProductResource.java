@@ -23,7 +23,7 @@ import java.util.Optional;
 @RequestMapping("product")
 public class ProductResource {
 
-    Logger logger= LoggerFactory.getLogger(ProductResource.class);
+    Logger logger = LoggerFactory.getLogger(ProductResource.class);
     @Autowired
     FileUploadHelper fileUploadHelper;
 
@@ -32,8 +32,7 @@ public class ProductResource {
 
 
     @PostMapping("/uploadImage")
-    public ResponseEntity<String> uploadFile(@RequestParam("image") MultipartFile file)
-    {
+    public ResponseEntity<String> uploadFile(@RequestParam("image") MultipartFile file) {
 
         try {
             if (file.isEmpty()) {
@@ -57,12 +56,10 @@ public class ProductResource {
     }
 
 
-
-
     @PostMapping("/addProduct")
     public ResponseEntity<String> addProduct(@Valid @RequestBody Product product) {
         productService.addProducts(product);
-          return ResponseEntity.ok("Product Added successfully");
+        return ResponseEntity.ok("Product Added successfully");
     }
 
     @GetMapping("/getAllProducts")

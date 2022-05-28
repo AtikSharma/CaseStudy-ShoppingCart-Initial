@@ -6,6 +6,7 @@ export const loadOrders = (id) => {
     axios.get(`${api}/order/customer/${id}`).then(
         (response) => { 
            localStorage.setItem("orders", JSON.stringify(response.data))
+           
         //    localStorage.setItem("address", JSON.stringify(response.data.userAddresses))
 
         },

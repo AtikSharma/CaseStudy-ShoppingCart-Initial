@@ -2,7 +2,6 @@ import axios from "axios";
 import api from './../../api/webapi';
 
 export const loadUser = (id) => {
-
     axios.get(`${api}/profile/getProfile/${id}`).then(
         (response) => { 
            localStorage.setItem("user", JSON.stringify(response.data))
@@ -13,3 +12,8 @@ export const loadUser = (id) => {
         }
     )
    };
+
+export const loadAllUsers = async () => {
+    const res = axios.get(`${api}/profile/getAllProfiles`);
+    return res ? res : res.catch(error => error);
+}

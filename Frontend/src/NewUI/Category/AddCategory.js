@@ -6,25 +6,21 @@ import axios from "axios";
 
 import FormCard from "../core/FormCard";
 import Base from "../core/Base";
-import api from './../api/webapi';
-import { checkAuthentication } from './../Auth/helper/authHelper';
+import api from "./../api/webapi";
+import { checkAuthentication } from "./../Auth/helper/authHelper";
+import { addCategory } from "./helper/categoryApiCall";
 
 function AddCategory() {
-
   const currentUser = checkAuthentication();
 
   useEffect(() => {
     document.title = "Add Category";
   }, []);
 
-  const [Category, setCategory] = useState({
-  });
-//  const categoryUrl = "http://localhost:7002/category";
-  //form handler
+  const [Category, setCategory] = useState({});
 
+  //form handler
   const handleForm = (e) => {
-    // postDataToServer();
-    console.log(Category);
     postDataToServer(Category);
     e.preventDefault();
   };
@@ -33,9 +29,7 @@ function AddCategory() {
   const postDataToServer = (category) => {
     console.log(currentUser.jwt);
     console.log(category);
-    axios.post(`${api}/category/addCategory`,category,{
-      
-    }  ).then(
+    axios.post(`${api}/category/addCategory`, category).then(
       (response) => {
         console.log(response);
         addCategory();
@@ -50,11 +44,6 @@ function AddCategory() {
     );
   };
 
-  
-
-
-
-
   const addCategory = () =>
     toast.success("Category Added!", {
       position: "top-center",
@@ -65,7 +54,6 @@ function AddCategory() {
       draggable: true,
       progress: undefined,
     });
-
 
   return (
     <Base title="" description="">
@@ -88,10 +76,6 @@ function AddCategory() {
             </Col>
           </FormGroup>
 
-          
-      
-         
-      
           <div className="text-center ">
             <Button
               type="submit"
@@ -100,7 +84,6 @@ function AddCategory() {
             >
               Add
             </Button>
-           
           </div>
         </Form>
       </FormCard>

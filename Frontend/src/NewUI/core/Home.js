@@ -64,6 +64,7 @@ export default function Home() {
                     <div
                       class="list-group-item list-group-item-action "
                       aria-current="true"
+                      data-testid="CategoryList"
                       key={category.categoryId}
                       onClick={() => {
                         selectCategory(category.categoryName);

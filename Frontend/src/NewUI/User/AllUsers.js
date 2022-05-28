@@ -5,6 +5,7 @@ import axios from "axios";
 import Base from "./../core/Base";
 import { checkAuthentication } from './../Auth/helper/authHelper';
 import { toast } from 'react-toastify';
+import { loadAllUsers } from "./helper/userProfile";
 
 const AllUsers = () => {
 
